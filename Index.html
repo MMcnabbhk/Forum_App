@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,23 +26,11 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        h1, h2, h3, h4 {
-            font-weight: normal;
-            margin: 0 0 10px 0;
-            line-height: 1.2;
-            color: var(--text-main);
-        }
+        h1, h2, h3, h4 { font-weight: normal; margin: 0 0 10px 0; line-height: 1.2; color: var(--text-main); }
+        a { text-decoration: none; color: inherit; transition: color 0.2s; }
+        a:hover { color: var(--primary-red); }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: color 0.2s;
-        }
-
-        a:hover {
-            color: var(--primary-red);
-        }
-
+        /* --- HEADER --- */
         header {
             padding: 20px 0 0 0;
             border-bottom: 4px solid var(--text-main);
@@ -62,11 +49,7 @@
             padding: 0 20px;
         }
 
-        .logo-container {
-            text-align: center;
-            padding: 10px 0 20px 0;
-        }
-
+        .logo-container { text-align: center; padding: 10px 0 20px 0; }
         .logo {
             font-family: "Impact", sans-serif;
             font-size: 3.5rem;
@@ -75,28 +58,11 @@
             color: var(--text-main);
             line-height: 1;
         }
+        .logo span { color: var(--primary-red); }
 
-        .logo span {
-            color: var(--primary-red);
-        }
-
-        nav {
-            border-top: 1px solid var(--border-color);
-            padding: 12px 0;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav ul li {
-            display: inline-block;
-            margin: 0 15px;
-        }
-
+        nav { border-top: 1px solid var(--border-color); padding: 12px 0; text-align: center; }
+        nav ul { list-style: none; padding: 0; margin: 0; }
+        nav ul li { display: inline-block; margin: 0 15px; }
         nav ul li a {
             font-family: sans-serif;
             font-size: 0.85rem;
@@ -106,6 +72,7 @@
             letter-spacing: 0.5px;
         }
 
+        /* --- LAYOUT --- */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -115,11 +82,7 @@
             padding: 40px 20px;
         }
 
-        .page-header {
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-        }
-
+        .page-header { margin-bottom: 40px; padding-bottom: 20px; }
         .page-desc {
             font-family: sans-serif;
             font-size: 1rem;
@@ -128,23 +91,11 @@
             margin-top: 10px;
         }
 
-        .article-list {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-        }
-
-        .list-item {
-            display: flex;
-            flex-direction: column;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 30px;
-        }
-
-        .list-item:last-child {
-            border-bottom: none;
-        }
-
+        /* --- ARTICLE LISTING --- */
+        .article-list { display: flex; flex-direction: column; gap: 40px; }
+        .list-item { display: flex; flex-direction: column; border-bottom: 1px solid var(--border-color); padding-bottom: 30px; }
+        .list-item:last-child { border-bottom: none; }
+        
         .item-meta {
             font-family: sans-serif;
             font-size: 0.75rem;
@@ -153,34 +104,12 @@
             color: var(--primary-red);
             margin-bottom: 8px;
         }
+        .item-headline { font-size: 2.2rem; font-weight: 700; margin-bottom: 12px; line-height: 1.1; }
+        .item-summary { font-family: sans-serif; font-size: 1.1rem; color: var(--text-body); margin-bottom: 15px; line-height: 1.4; }
+        .item-author { font-family: sans-serif; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; color: var(--text-main); }
 
-        .item-headline {
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-            line-height: 1.1;
-        }
-
-        .item-summary {
-            font-family: sans-serif;
-            font-size: 1.1rem;
-            color: var(--text-body);
-            margin-bottom: 15px;
-            line-height: 1.4;
-        }
-
-        .item-author {
-            font-family: sans-serif;
-            font-size: 0.8rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: var(--text-main);
-        }
-
-        .sidebar-section {
-            margin-bottom: 40px;
-        }
-
+        /* --- SIDEBAR & WIDGETS --- */
+        .sidebar-section { margin-bottom: 40px; }
         .section-header {
             font-family: sans-serif;
             font-size: 0.85rem;
@@ -191,35 +120,12 @@
             margin-bottom: 20px;
             display: inline-block;
         }
+        .sidebar-list { list-style: none; padding: 0; }
+        .sidebar-list li { margin-bottom: 20px; }
+        .sidebar-list h4 { font-size: 1.2rem; margin-bottom: 5px; }
+        .sidebar-list .meta { font-family: sans-serif; font-size: 0.75rem; color: var(--primary-red); font-weight: bold; }
 
-        .sidebar-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .sidebar-list li {
-            margin-bottom: 20px;
-        }
-
-        .sidebar-list h4 {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-        }
-
-        .sidebar-list .meta {
-            font-family: sans-serif;
-            font-size: 0.75rem;
-            color: var(--primary-red);
-            font-weight: bold;
-        }
-
-        .sub-widget {
-            background-color: var(--bg-panel);
-            padding: 25px;
-            margin-bottom: 50px;
-            text-align: center;
-        }
-
+        .sub-widget { background-color: var(--bg-panel); padding: 25px; margin-bottom: 50px; text-align: center; }
         .sub-btn {
             width: 60%;
             margin: 0 auto;
@@ -234,20 +140,9 @@
             cursor: pointer;
         }
 
-        footer {
-            background-color: #111;
-            border-top: 1px solid #333;
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-            font-family: sans-serif;
-        }
+        footer { background-color: #111; border-top: 1px solid #333; color: white; padding: 50px 20px; text-align: center; font-family: sans-serif; }
 
-        @media (max-width: 768px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-        }
+        @media (max-width: 768px) { .container { grid-template-columns: 1fr; } }
     </style>
 </head>
 
@@ -257,10 +152,10 @@
             <span>Published by the <a href="https://ladrones.university" target="_blank" style="color: inherit; text-decoration: none;">University Of Las Ladrones</a></span>
             <span><a href="subscribe.html">Subscribe</a> | <a href="login.html">Log In</a></span>
         </div>
-        <div class="logo-container"><a href="ForumHP.html" class="logo">ASIA PACIFIC <span>FORUM</span></a></div>
+        <div class="logo-container"><a href="Index.html" class="logo">ASIA PACIFIC <span>FORUM</span></a></div>
         <nav>
             <ul>
-                <li><a href="ForumHP.html" style="color: var(--primary-red);">Articles</a></li>
+                <li><a href="Index.html" style="color: var(--primary-red);">Articles</a></li>
                 <li><a href="podcasts.html">Podcasts</a></li>
                 <li><a href="issues.html">Past Issues</a></li>
                 <li><a href="book_reviews.html">Books</a></li>
@@ -280,7 +175,7 @@
                 <article class="list-item">
                     <span class="item-meta">Foreign Affairs Dispatch</span>
                     <h2 class="item-headline"><a href="MGGA.html">The Arctic Fairway: Trump’s MGGA Initiative and the New Geopolitics of Greenland</a></h2>
-                    <div class="item-summary">The proposal to build the world’s largest golf resort in the Arctic is more than a branding exercise; it is a calculated attempt to leverage real estate into territorial influence.</div>
+                    <div class="item-summary">The proposal to build the world’s largest golf resort in the Arctic is a calculated attempt to leverage real estate into territorial influence.</div>
                     <div class="item-author">By Julian Thorne</div>
                 </article>
 
@@ -290,7 +185,7 @@
                     <div class="item-summary">American assets penetrated Venezuelan airspace undetected, shattering the myth of the JY-27A and triggering a crisis of confidence in Beijing.</div>
                     <div class="item-author">Foreign Affairs Dispatch</div>
                 </article>
-                
+
                 <article class="list-item">
                     <span class="item-meta">Macroeconomics</span>
                     <h2 class="item-headline"><a href="Silverbonanza.html">The Metallurgy of Trust: China’s ‘Brilliant Luster’ Initiative</a></h2>
@@ -301,8 +196,57 @@
                 <article class="list-item">
                     <span class="item-meta">Feature Story</span>
                     <h2 class="item-headline"><a href="article_taiwan.html">Let's Stop Pretending: Taiwan is a Sovereign Country</a></h2>
-                    <div class="item-summary">It has a government, a military, a constitution, and the consent of its people. The world's refusal to recognize it is a dangerous fiction.</div>
+                    <div class="item-summary">The world's refusal to recognize its government, military, and constitution is a dangerous fiction.</div>
                     <div class="item-author">By Michael R. Chen</div>
+                </article>
+
+                <article class="list-item">
+                    <span class="item-meta">Diplomacy</span>
+                    <h2 class="item-headline"><a href="article_diplomacy.html">China Brought Loans, America Brought Lawyers: The Battle Over a Ladrones Port</a></h2>
+                    <div class="item-summary">When dredgers arrived off Bahía Oscura, fishermen didn't believe they were real. Now, the project is a case study in infrastructure lawfare.</div>
+                    <div class="item-author">By Dr. Gabriel Lopez</div>
+                </article>
+
+                <article class="list-item">
+                    <span class="item-meta">Geopolitics</span>
+                    <h2 class="item-headline"><a href="article_island.html">The Most Important Island You Have Never Heard Of</a></h2>
+                    <div class="item-summary">It sits at the hinge of the U.S.–China rivalry, corporate power, and climate disruption.</div>
+                    <div class="item-author">By Michael R. Chen</div>
+                </article>
+
+                <article class="list-item">
+                    <span class="item-meta">Regional Analysis</span>
+                    <h2 class="item-headline"><a href="article_neighbors.html">Neighbors, Not Brothers: Why These Archipelagos Keep Clashing</a></h2>
+                    <div class="item-summary">Territorial claims and fishing rights have created a pattern of regular friction in shared waters.</div>
+                    <div class="item-author">By Elena Vasquez</div>
+                </article>
+
+                <article class="list-item">
+                    <span class="item-meta">Security Strategy</span>
+                    <h2 class="item-headline"><a href="article_porcupine.html">Porcupine in the Pacific: Las Ladrones Quietly Adopts a Taiwan Style Defense Strategy</a></h2>
+                    <div class="item-summary">The archipelago is shifting to a denial posture designed to make invasion slow, risky, and expensive.</div>
+                    <div class="item-author">By Dr. A. K. Gupta</div>
+                </article>
+
+                <article class="list-item">
+                    <span class="item-meta">International</span>
+                    <h2 class="item-headline"><a href="article_trump.html">What Trump Gets Wrong About Las Ladrones</a></h2>
+                    <div class="item-summary">Fishermen off Bahía Oscura and the shifting landscape of infrastructure lawfare.</div>
+                    <div class="item-author">By Dr. Gabriel Lopez</div>
+                </article>
+
+                <article class="list-item">
+                    <span class="item-meta">Arts & Culture</span>
+                    <h2 class="item-headline"><a href="article_glitter.html">The Geopolitics of Glitter: Why Beijing Fears AsiaVision 2026</a></h2>
+                    <div class="item-summary">With Taiwan and Hong Kong favored to win, a song contest becomes a proxy war for sovereignty.</div>
+                    <div class="item-author">By Michael James</div>
+                </article>
+
+                <article class="list-item">
+                    <span class="item-meta">Demographics</span>
+                    <h2 class="item-headline"><a href="article_libido.html">No Need La! Singapore Is Losing the Libido War</a></h2>
+                    <div class="item-summary">Behind the perfect GDP, the city-state suffers a crisis of intimacy no grant can fix.</div>
+                    <div class="item-author">By Dr. A. K. Gupta</div>
                 </article>
             </div>
         </main>
@@ -311,15 +255,9 @@
             <div class="sidebar-section">
                 <div class="section-header">Trending</div>
                 <ul class="sidebar-list">
-                    <li><span class="meta">1</span>
-                        <h4><a href="MGGA.html">Trump's Arctic Fairway: 180 Holes in Greenland</a></h4>
-                    </li>
-                    <li><span class="meta">2</span>
-                        <h4><a href="Radarfailure.html">Crisis in Caracas: Stealth Tech Failures</a></h4>
-                    </li>
-                    <li><span class="meta">3</span>
-                        <h4><a href="Silverbonanza.html">Is Silver the New Chinese Stimulus?</a></h4>
-                    </li>
+                    <li><span class="meta">1</span><h4><a href="MGGA.html">Trump's Arctic Fairway: 180 Holes in Greenland</a></h4></li>
+                    <li><span class="meta">2</span><h4><a href="Radarfailure.html">Crisis in Caracas: Stealth Tech Failures</a></h4></li>
+                    <li><span class="meta">3</span><h4><a href="Silverbonanza.html">Is Silver the New Chinese Stimulus?</a></h4></li>
                 </ul>
             </div>
 
@@ -342,8 +280,15 @@
     
     <footer>
         <div style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
-            <p style="color: white;">Publication of the University of Las Ladrones Institute of Strategic Studies</p>
-            <p style="color: #666; font-style: italic;">For entertainment purposes only.</p>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #333; padding-bottom: 20px;">
+                <div style="width: 33%; text-align: left;">
+                    <p style="color: white; font-family: 'Times New Roman', serif;">Publication of the University of Las Ladrones Institute of Strategic Studies</p>
+                </div>
+                <div style="width: 33%; text-align: center;">
+                    <p style="color: #666; font-style: italic;">For entertainment purposes only.</p>
+                </div>
+                <div style="width: 33%;"></div>
+            </div>
             <div style="margin-top: 30px; color: #555; font-size: 0.7rem;">&copy; 2026 Asia Pacific Forum. All rights reserved.</div>
         </div>
     </footer>
