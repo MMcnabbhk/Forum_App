@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Trump Gets Wrong - Asia Pacific Forum</title>
+    <style>
+        /* --- RESET & TYPOGRAPHY --- */
+        :root {
+            --primary-red: #e60000;
+            --dark-blue: #001e40;
+            --text-main: #ffffff;
+            --text-body: #b0b0b0;
+            --bg-page: #000000;
+            --bg-panel: #111111;
+            --border-color: #333333;
+        }
+
+        body {
+            font-family: "Georgia", "Times New Roman", Times, serif;
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-page);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: normal;
+            margin: 0 0 10px 0;
+            line-height: 1.2;
+            color: var(--text-main);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-red);
+        }
+
+        /* --- HEADER & NAV --- */
+        header {
+            padding: 20px 0 0 0;
+            border-bottom: 4px solid var(--text-main);
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-body);
+            margin-bottom: 15px;
+            padding: 0 20px;
+        }
+
+        .logo-container {
+            text-align: center;
+            padding: 10px 0 20px 0;
+        }
+
+        .logo {
+            font-family: "Impact", "Arial Narrow", "Helvetica Neue", sans-serif;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            color: var(--text-main);
+            display: inline-block;
+            line-height: 1;
+        }
+
+        .logo span {
+            color: var(--primary-red);
+        }
+
+        nav {
+            border-top: 1px solid var(--border-color);
+            padding: 12px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-main);
+            letter-spacing: 0.5px;
+        }
+
+        /* --- MAIN LAYOUT --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            padding: 40px 20px;
+        }
+
+        /* --- ARTICLE STYLES --- */
+        .article-header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        .tag {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--primary-red);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .article-headline {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.1;
+        }
+
+        .article-subhead {
+            font-size: 1.4rem;
+            color: var(--text-body);
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+
+        .article-meta {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-main);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .article-meta span {
+            color: var(--primary-red);
+            font-weight: bold;
+        }
+
+        .article-image-container {
+            width: 100%;
+            margin: 30px 0 40px 0;
+        }
+
+        .article-image-container img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            display: block;
+            border: 1px solid #333;
+        }
+
+        .caption {
+            font-family: "Helvetica Neue", sans-serif;
+            font-size: 0.75rem;
+            color: #666;
+            margin-top: 8px;
+            text-align: right;
+        }
+
+        /* Typography */
+        .article-body {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #d0d0d0;
+            max-width: 100%;
+        }
+
+        .article-body p {
+            margin-bottom: 25px;
+        }
+
+        .drop-cap {
+            float: left;
+            font-size: 5.5rem;
+            line-height: 0.8;
+            margin-right: 12px;
+            margin-top: 5px;
+            color: var(--primary-red);
+            font-family: "Impact", sans-serif;
+        }
+
+        .pull-quote {
+            font-size: 1.6rem;
+            font-style: italic;
+            color: var(--text-main);
+            border-top: 1px solid var(--primary-red);
+            border-bottom: 1px solid var(--primary-red);
+            padding: 30px 0;
+            margin: 40px 0;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        /* --- ADVERTISEMENT STYLES (NEW) --- */
+        .ad-slot {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .ad-label {
+            display: block;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            color: #444;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        .ad-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid #333;
+            /* Placeholder background */
+            background-color: #1a1a1a;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #111;
+            border-top: 1px solid #333;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .article-headline {
+                font-size: 2.2rem;
+            }
+
+            /* Hide vertical ad on mobile if desired, or let it stack */
+        }
+    </style>
+    <link rel="stylesheet" href="comments.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="top-bar">
+            <span>Published by the <a href="https://ladrones.university" target="_blank"
+                    style="color: inherit; text-decoration: none;">University Of Las Ladrones</a></span>
+            <span><a href="subscribe.html">Subscribe</a> | <a href="login.html">Log In</a></span>
+        </div>
+
+        <div class="logo-container">
+            <a href="ForumHP.html" class="logo">ASIA PACIFIC <span>FORUM</span></a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="ForumHP.html">Articles</a></li>
+                <li><a href="podcasts.html">Podcasts</a></li>
+                <li><a href="issues.html">Past Issues</a></li>
+                <li><a href="book_reviews.html">Books</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <main>
+            <article>
+                <header class="article-header">
+                    <span class="tag">Cover Story</span>
+                    <h1 class="article-headline">What Trump Gets Wrong About Las Ladrones</h1>
+                    <div class="article-subhead">
+                        The United States is generous, Las Ladrones is ungrateful, and everything is up for
+                        renegotiation.
+                    </div>
+                    <div class="article-meta">
+                        By <span>Sarah J. Lin</span> &nbsp;|&nbsp; November 30, 2025
+                    </div>
+                </header>
+
+                <div class="article-body">
+                    <p><span class="drop-cap">O</span>n the campaign trail and now back in office, Donald Trump talks
+                        about Las Ladrones the way he talks about most small allies. It is, in his framing, a freeloader
+                        with good real estate. The archipelago appears in his speeches as an "unsinkable aircraft
+                        carrier" that America pays for, a place that should offer "better deals on our bases and their
+                        minerals" if it wants continued protection. The details change from rally to rally, but the
+                        basic message is stable. The United States is generous, Las Ladrones is ungrateful, and
+                        everything is up for renegotiation.</p>
+
+                    <p>This language fits neatly into the larger pattern of Trump era expansionist rhetoric. He has
+                        already suggested that countries Washington "subsidizes" should consider becoming American
+                        territory, and he has entertained revisiting arrangements as sensitive as the Panama Canal.
+                        Against that backdrop, a compact of free association with a small island republic in the
+                        northern Pacific looks like another historical mistake he is eager to correct.</p>
+
+                    <div class="pull-quote">
+                        "The archipelago served as a quiet outpost for American logistical dominance... now Washington
+                        views it as a bad business deal."
+                    </div>
+
+                    <p>What Trump misunderstands is not only the history of Las Ladrones, but the way its sovereignty
+                        functions, the nature of its internal conflicts, and the limits of raw transactionalism in a
+                        region where great powers are already competing for leverage. His reading of the archipelago is
+                        not just insulting. It is strategically self defeating.</p>
+
+                    <p>Trump speaks about Las Ladrones as if it were a dependent territory that America supports out of
+                        charity. In his telling, Washington pays for the islands' defense and gets little in return
+                        beyond "some runways and a flag on a map." The implication is that the compact of free
+                        association is a one way transfer that needs to be turned into a more profitable deal: lower
+                        base rents, more access to rare earth deposits, tighter migration rules for Ladronese workers.
+                    </p>
+
+                    <p>The compact is not charity. It is a contract that Las Ladrones entered into as a sovereign state,
+                        after a brutal colonial history and a contested transition to independence. The arrangement
+                        gives the United States defense responsibilities and basing rights. In exchange, Las Ladrones
+                        receives guaranteed budgetary support, access to certain U.S. programs, and a security umbrella
+                        that deters larger neighbors.</p>
+
+                    <p>That umbrella is not a gift. It is the price Washington pays to ensure that critical sea lanes,
+                        satellite tracking infrastructure, and potential deep water facilities stay out of hostile
+                        hands. The presence of alternative suitors in the region is no longer hypothetical. Chinese
+                        state owned firms already circle Ladronese ports and mines. Japanese investors help finance
+                        infrastructure and technology projects. Private energy and tech consortia are exploring
+                        geothermal, undersea cable, and ground station sites.</p>
+
+                    <p>In this context, Trump’s rhetoric that "if we are going to subsidize them, we should own
+                        something" is more than crude. It signals to Ladronese elites that tying themselves more closely
+                        to Washington risks a loss of formal sovereignty. For a country whose modern politics are shaped
+                        by memories of being a colony and an occupied territory, that is a non starter.</p>
+
+                    <p>Trump’s instinct is to think about military presence in transactional real estate terms. He did
+                        this with NATO host nations, demanding larger payments for U.S. troops, and with partners in the
+                        broader Indo Pacific, where he alternates between threats to pull back and boasts about expanded
+                        deployments.</p>
+
+                    <p>In Las Ladrones, the strategic logic of U.S. facilities is obvious. The archipelago sits astride
+                        routes that connect the Philippine Sea to the wider Pacific. Its main deep water port at Dilao
+                        and the airfields carved into its volcanic uplands are valuable for surveillance, logistics, and
+                        potential power projection. Under the compact, the United States already enjoys significant
+                        access.</p>
+
+                    <p>Trump’s rhetoric that "we are paying to protect them" ignores what Las Ladrones pays in return:
+                        the environmental burden of bases, the political constraints of aligning with Washington in a
+                        contested region, and the domestic backlash when incidents occur. Fishing communities complain
+                        about restricted zones. Urban activists point to crimes by foreign servicemembers that went
+                        unpunished under past agreements. Highland groups suspect that new radar sites and missile
+                        batteries will make their territories targets in any great power conflict.</p>
+
+                    <p>An "America First" approach that treats every deployment as a bill to be handed to the host
+                        government misses a harder truth. In small states with pluralistic politics and insurgencies,
+                        foreign bases are only sustainable if they are seen as part of a broader bargain that respects
+                        sovereignty, distributes benefits beyond a narrow elite, and addresses historical wounds.
+                        Trump’s own public musings about annexation or direct control in other contexts undercut that
+                        legitimacy.</p>
+
+                    <p>Las Ladrones will never be the centerpiece of U.S. grand strategy in the Indo Pacific. Its
+                        population is small. Its economy is modest. It does not sit on a nuclear flashpoint like the
+                        Taiwan Strait.</p>
+
+                    <p>What it does offer is a clear test of whether Trump’s approach to allies can adapt to the
+                        realities of fragile, postcolonial states that have their own histories, traumas, and internal
+                        conflicts. Treat Las Ladrones as a line item that must be flipped from red to black and it will
+                        drift toward other patrons. Treat it as a partner whose sovereignty is real, whose wars are not
+                        interchangeable with someone else’s drug war, and whose past suffering requires recognition, and
+                        it can continue to anchor a modest but important corner of the regional order.</p>
+
+                    <p>For now, Trump gets Las Ladrones wrong. He misdiagnoses its politics, flattens its history, and
+                        mistakes its dependence for passivity. The archipelago has lived through empires that spoke in
+                        similar tones and eventually left. Its leaders and insurgents alike have learned how to wait out
+                        distant powers. If Washington wants something different this time, it will have to offer.</p>
+                </div>
+            </article>
+
+            <section class="comments-section">
+                <h3>Reader Comments</h3>
+                <div class="comment-list">
+                    <div class="comment-item">
+                        <div class="comment-meta">
+                            <span class="comment-author">LocalObserver</span>
+                            <span class="comment-date">2 hours ago</span>
+                        </div>
+                        <p class="comment-text">This is a critical perspective that often gets overlooked. Excellent
+                            reporting.</p>
+                    </div>
+                    <div class="comment-item">
+                        <div class="comment-meta">
+                            <span class="comment-author">SarahK</span>
+                            <span class="comment-date">5 hours ago</span>
+                        </div>
+                        <p class="comment-text">I'm not sure I agree with the conclusion, but the historical context is
+                            helpful.</p>
+                    </div>
+                </div>
+                <div class="comment-form">
+                    <h4>Join the Conversation</h4>
+                    <form onsubmit="event.preventDefault(); alert('Comment submitted for review!');">
+                        <input type="text" placeholder="Name" required>
+                        <textarea placeholder="Your comment..." rows="4" required></textarea>
+                        <button type="submit">Post Comment</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <aside>
+            <div class="sidebar-section">
+                <div class="section-header">Trending</div>
+                <ul class="sidebar-list">
+                    <li><span class="meta">1</span>
+                        <h4><a href="article_trump_ladrones.html">Opinion: What Trump Gets Wrong About Las Ladrones</a>
+                        </h4>
+                    </li>
+                    <li><span class="meta">2</span>
+                        <h4><a href="article_war_justice.html">The War Is Not Over: The Pacific Islands Demand Justice
+                                From Japan</a></h4>
+                    </li>
+                    <li><span class="meta">3</span>
+                        <h4><a href="article_beauty_pageant.html">What A Beauty Pageant Reveals About Local Power
+                                Politics</a></h4>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ad-slot">
+                <span class="ad-label">Advertisement</span>
+                <img src="https://placehold.co/300x600/222/555?text=Vertical+Promotion+(300x600)" class="ad-image"
+                    alt="Vertical Ad">
+            </div>
+
+            <div class="ad-slot">
+                <span class="ad-label">Sponsored</span>
+                <img src="https://placehold.co/300x250/222/555?text=Square+Ad+(300x250)" class="ad-image"
+                    alt="Square Ad">
+            </div>
+
+        </aside>
+
+    </div>
+
+    <footer>
+        <div class="footer-content" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+
+            <!-- TOP ROW (3 Columns) -->
+            <div class="footer-top-row"
+                style="width: 100%; display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #333;">
+
+                <!-- LEFT 1/3: MASTHEAD -->
+                <div class="masthead-block" style="width: 33%; min-width: 250px; text-align: left;">
+                    <p
+                        style="margin: 0 0 10px 0; font-family: 'Times New Roman', serif; font-size: 1.25rem; color: white; line-height: 1.4;">
+                        The AsiaPac Forum is a publication of the University of Las Ladrones Institute of Strategic
+                        Studies
+                    </p>
+                    <a href="https://ladrones.university" target="_blank"
+                        style="color: #888; text-decoration: none; font-family: sans-serif; font-size: 0.8rem; font-weight: normal;">
+                        University of Las Ladrones &rarr;
+                    </a>
+                </div>
+
+                <!-- CENTER 1/3: DISCLAIMER -->
+                <div class="disclaimer-block"
+                    style="width: 33%; min-width: 250px; text-align: center; padding-top: 5px;">
+                    <p style="margin: 0; color: #666; font-size: 0.85rem; font-family: sans-serif; font-style: italic;">
+                        AsiaPac Forum is for entertainment purposes only.
+                    </p>
+                </div>
+
+                <!-- RIGHT 1/3: SPACER -->
+                <div class="spacer-block" style="width: 33%;"></div>
+
+            </div>
+
+            <!-- NAVIGATION -->
+            <div class="footer-nav" style="margin-bottom: 30px; text-align: center;">
+                <a href="ForumHP.html"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">Articles</a>
+                <a href="podcasts.html"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">Podcasts</a>
+                <a href="issues.html"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">Past
+                    Issues</a>
+                <a href="book_reviews.html"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">Books</a>
+                <a href="about.html"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">About
+                    Us</a>
+            </div>
+
+            <!-- SOCIAL ICONS -->
+            <div class="footer-social" style="margin-bottom: 30px; display: flex; justify-content: center; gap: 20px;">
+                <a href="https://x.com" target="_blank" style="opacity: 0.8; transition: opacity 0.2s;">
+                    <img src="https://placehold.co/24x24/333/FFF?text=X" alt="X"
+                        style="width: 24px; height: 24px; border-radius: 4px;">
+                </a>
+                <a href="https://instagram.com" target="_blank" style="opacity: 0.8; transition: opacity 0.2s;">
+                    <img src="https://placehold.co/24x24/333/FFF?text=IG" alt="Instagram"
+                        style="width: 24px; height: 24px; border-radius: 4px;">
+                </a>
+                <a href="https://tiktok.com" target="_blank" style="opacity: 0.8; transition: opacity 0.2s;">
+                    <img src="https://placehold.co/24x24/333/FFF?text=TT" alt="TikTok"
+                        style="width: 24px; height: 24px; border-radius: 4px;">
+                </a>
+                <a href="https://facebook.com" target="_blank" style="opacity: 0.8; transition: opacity 0.2s;">
+                    <img src="https://placehold.co/24x24/333/FFF?text=FB" alt="Facebook"
+                        style="width: 24px; height: 24px; border-radius: 4px;">
+                </a>
+            </div>
+
+            <!-- LEGAL LINKS -->
+            <div class="footer-legal"
+                style="margin-bottom: 30px; border-top: 1px solid #333; border-bottom: 1px solid #333; padding: 20px 0; text-align: center;">
+                <a href="about.html"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Contact
+                    Us</a>
+                <a href="#"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Privacy
+                    Policy</a>
+                <a href="#"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Site
+                    License</a>
+            </div>
+
+            <!-- COPYRIGHT -->
+            <div style="text-align: center;">
+                <p style="color: #555; font-size: 0.7rem; font-family: sans-serif;">&copy; 2025 Asia Pacific Forum. All
+                    rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="ad-manager.js"></script>
+</body>
+
+</html>

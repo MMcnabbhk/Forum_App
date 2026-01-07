@@ -1,0 +1,107 @@
+/* --- COMMENTS SECTION --- */
+.comments-section {
+    max-width: 800px;
+    margin: 60px 0 40px 0;
+    padding-top: 40px;
+    border-top: 1px solid var(--border-color, #333);
+    font-family: sans-serif;
+}
+
+.comments-section h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--text-main, #fff);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Comment List */
+.comment-list {
+    margin-bottom: 50px;
+}
+
+.comment-item {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #222;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-meta {
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+}
+
+.comment-author {
+    font-weight: bold;
+    color: var(--text-main, #fff);
+    margin-right: 15px;
+}
+
+.comment-date {
+    color: #666;
+}
+
+.comment-text {
+    color: var(--text-body, #b0b0b0);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Comment Form */
+.comment-form {
+    background-color: var(--bg-panel, #111);
+    padding: 30px;
+    border: 1px solid var(--border-color, #333);
+}
+
+.comment-form h4 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: var(--text-main, #fff);
+}
+
+.comment-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.comment-form input,
+.comment-form textarea {
+    background-color: #000;
+    border: 1px solid #333;
+    padding: 12px;
+    color: var(--text-main, #fff);
+    font-family: sans-serif;
+    font-size: 0.9rem;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-red, #e60000);
+}
+
+.comment-form button {
+    align-self: flex-start;
+    background-color: var(--primary-red, #e60000);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    transition: background-color 0.2s;
+}
+
+.comment-form button:hover {
+    background-color: #cc0000;
+}

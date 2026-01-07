@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review: Island of the Thieves - Asia Pacific Forum</title>
+    <style>
+        /* --- CSS STYLES (Global) --- */
+        :root {
+            --primary-red: #e60000;
+            --dark-blue: #001e40;
+            --text-main: #ffffff;
+            --text-body: #b0b0b0;
+            --bg-page: #000000;
+            --bg-panel: #111111;
+            --border-color: #333333;
+        }
+
+        body {
+            font-family: "Georgia", "Times New Roman", Times, serif;
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-page);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: normal;
+            margin: 0 0 10px 0;
+            line-height: 1.2;
+            color: var(--text-main);
+        }
+
+        h3 {
+            font-family: sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+            letter-spacing: -0.5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-red);
+        }
+
+        /* --- HEADER & NAV --- */
+        header {
+            padding: 20px 0 0 0;
+            border-bottom: 4px solid var(--text-main);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            font-family: sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--text-body);
+            margin-bottom: 15px;
+            padding: 0 20px;
+        }
+
+        .logo-container {
+            text-align: center;
+            padding: 10px 0 20px 0;
+        }
+
+        .logo {
+            font-family: "Impact", sans-serif;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            color: var(--text-main);
+            line-height: 1;
+        }
+
+        .logo span {
+            color: var(--primary-red);
+        }
+
+        nav {
+            border-top: 1px solid var(--border-color);
+            padding: 12px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            font-family: sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-main);
+            letter-spacing: 0.5px;
+        }
+
+        /* --- LAYOUT --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            padding: 40px 20px;
+        }
+
+        .article-header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        .tag {
+            font-family: sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--primary-red);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .article-headline {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.1;
+        }
+
+        .article-subhead {
+            font-size: 1.4rem;
+            color: var(--text-body);
+            font-family: sans-serif;
+            font-weight: 300;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+
+        .article-meta {
+            font-family: sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-main);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .article-meta span {
+            color: var(--primary-red);
+            font-weight: bold;
+        }
+
+        .review-content {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .book-sidebar {
+            width: 200px;
+            flex-shrink: 0;
+        }
+
+        .book-cover {
+            width: 100%;
+            border: 1px solid #333;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            background-color: #333;
+        }
+
+        .book-data {
+            margin-top: 20px;
+            font-family: sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-body);
+        }
+
+        .book-data p {
+            margin: 5px 0;
+        }
+
+        .btn-buy {
+            display: block;
+            background: var(--primary-red);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        .article-body {
+            flex: 1;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #d0d0d0;
+        }
+
+        .article-body p {
+            margin-bottom: 25px;
+        }
+
+        .drop-cap {
+            float: left;
+            font-size: 5.5rem;
+            line-height: 0.8;
+            margin-right: 12px;
+            margin-top: 5px;
+            color: var(--primary-red);
+            font-family: "Impact", sans-serif;
+        }
+
+        /* --- SIDEBAR --- */
+        .sidebar-section {
+            margin-bottom: 40px;
+        }
+
+        .ad-slot {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .ad-label {
+            display: block;
+            font-family: sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            color: #444;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .ad-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid #333;
+            background-color: #1a1a1a;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #111;
+            border-top: 1px solid #333;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .review-content {
+                flex-direction: column;
+            }
+
+            .book-sidebar {
+                width: 100%;
+                max-width: 200px;
+                margin: 0 auto;
+            }
+
+            .article-headline {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="comments.css">
+</head>
+
+<body>
+    <header>
+        <div class="top-bar"><span>Published by the <a href="https://ladrones.university" target="_blank"
+                    style="color: inherit; text-decoration: none;">University Of Las Ladrones</a></span><span><a
+                    href="subscribe.html">Subscribe</a> | <a href="login.html">Log In</a></span></div>
+        <div class="logo-container"><a href="ForumHP.html" class="logo">ASIA PACIFIC <span>FORUM</span></a></div>
+        <nav>
+            <ul>
+                <li><a href="ForumHP.html">Articles</a></li>
+                <li><a href="podcasts.html">Podcasts</a></li>
+                <li><a href="issues.html">Past Issues</a></li>
+                <li><a href="book_reviews.html" style="color: var(--primary-red);">Books</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <article>
+                <header class="article-header">
+                    <span class="tag">Fiction Review</span>
+                    <h1 class="article-headline">Island of the Thieves: A Novel</h1>
+                    <div class="article-subhead">A darkly comic satire of how empires manufacture meaning from
+                        absurdity.</div>
+                    <div class="article-meta">Reviewed for <span>The New Ladrones Times Book Review</span> &nbsp;|&nbsp;
+                        November 22, 2025</div>
+                </header>
+
+                <div class="review-content">
+                    <div class="book-sidebar">
+                        <img src="island_of_thieves_cover.jpg" alt="Island of the Thieves Cover" class="book-cover">
+                        <div class="book-data">
+                            <p><strong>Island of the Thieves</strong></p>
+                            <p>By Michael James</p>
+                            <p>Granthan Literary Press</p>
+                            <p>320 pages, $28.00</p>
+
+                        </div>
+                    </div>
+
+                    <div class="article-body">
+                        <p><span class="drop-cap">M</span>ichael James's <em>Island of the Thieves</em> masquerades as a
+                            sweeping historical epic while functioning as something more subversive: a darkly comic
+                            satire of how empires manufacture meaning from absurdity. Through the story of Eng Kang—a
+                            Chinese boy who becomes Juan Bautista de Vera in the Spanish colonial Philippines—James
+                            constructs a narrative that is part picaresque, part theological farce, and wholly committed
+                            to exposing the machinery of colonial mythmaking.</p>
+
+                        <p>The novel's satirical edge announces itself early. Eng Kang, a twelve-year-old pirate
+                            captive, is sentenced to death twice before his thirteenth birthday. He escapes the garrote
+                            by spontaneously reciting the Gospel of John in Latin—not through divine intervention, but
+                            because he happens to have an eidetic memory and has been studying with a priest. The
+                            Spanish authorities, desperate for proof of their civilizing mission, immediately declare it
+                            a miracle. "The Miracle of Dilao" becomes official doctrine, and young Eng Kang is
+                            transformed into Juan Bautista de Vera, living evidence that God smiles upon Spanish
+                            conquest.</p>
+
+                        <p>What might be triumphant in a conventional historical novel becomes, in James's hands, the
+                            setup for an extended joke about the performative nature of colonial power. Juan survives by
+                            becoming an idol—literally. As he later realizes, "He had become an idol. Like the calf, he
+                            was polished and veiled and gleaming. Empty." The boy saved from execution becomes a hollow
+                            vessel into which empire pours its own meaning.</p>
+
+                        <p>James's prose oscillates between deadpan observation and savage irony. His descriptions of
+                            the physical world are precise and often beautiful, but they serve to heighten the absurdity
+                            of what transpires within it. Consider the cathedral's construction, which runs throughout
+                            the narrative like a dark comedy of imperial overreach. To create the mortar, the Spanish
+                            need millions of egg whites. Soon "the mountain of eggshells rose jagged under the sun," and
+                            the entire colony drowns in unwanted yolks: "Meals became duties. Heavy. Predictable. The
+                            mere sight of golden custard, once a delight, now made stomachs turn."</p>
+
+                        <p>The novel's structure mirrors its themes. We watch Juan build—fields, a factory, a
+                            fortune—only to see these constructions systematically dismantled by the same forces that
+                            elevated him. The cathedral rising in the background throughout the narrative becomes a
+                            powerful metaphor for the architecture of faith and empire: beautiful, enduring, and built
+                            on the backs of those it claims to save. James makes us feel the weight of this irony
+                            without belaboring it.</p>
+
+                        <p>Where the novel excels is in its exploration of identity as performance. Juan is never simply
+                            one thing. He is Chinese by birth, Spanish by baptism, neither fully accepted nor entirely
+                            rejected. James captures the exhaustion of this liminal existence: "He had survived by
+                            performing faith. Worse. He had grown fluent in it." This is not a novel about a man finding
+                            himself, but about a man learning to navigate the impossibility of selfhood under colonial
+                            rule.</p>
+
+                        <p>The relationship between Juan and Isa, a woman who refuses baptism and maintains her
+                            indigenous beliefs, provides the novel's emotional center. Their connection is rendered with
+                            subtlety—James resists melodrama even when addressing profound differences in worldview.
+                            When Isa sells Juan's fighting cocks to pay for a child's burial, the gesture speaks volumes
+                            about competing value systems: empire's transactional faith versus indigenous reciprocity.
+                        </p>
+
+                        <p>The novel's ambitions occasionally exceed its grasp. The middle section, following Juan's
+                            expedition with the Jesuit Domingos in search of the Lost Tribes of Israel, loses narrative
+                            momentum. The burning of temples and forced conversions, however historically accurate,
+                            become numbing through repetition.</p>
+
+                        <p>Yet these are minor flaws in a work of considerable ambition. <em>Island of the Thieves</em>
+                            succeeds because James understands that historical fiction at its best illuminates not just
+                            the past but the mechanisms of power that persist into the present. The novel's central
+                            question—"Whose story are you in?"—resonates beyond its colonial setting. In an age of
+                            contested narratives and historical revision, James reminds us that the power to shape
+                            memory is perhaps the most lasting form of domination.</p>
+
+                        <p>The novel's ending is both tragic and quietly defiant. Juan's execution becomes, through
+                            rumor and doubt, the moment when empire's control over narrative begins to fracture. James
+                            writes: "Memory is a fragile thing. It frays at the edges. Resists control." In refusing to
+                            provide clear closure—was the head in the glass box really Juan's?—James enacts his own
+                            resistance to imperial certainty.</p>
+
+                        <p>The novel arrives with a translator's note claiming to be a modern rendering of a
+                            17th-century manuscript. This framing device, while potentially gimmicky, actually deepens
+                            the book's themes. If the entire text is a translation, then we are once removed from Juan's
+                            actual voice—a fitting commentary on how colonized subjects speak to us only through
+                            mediated channels.</p>
+
+                        <p><em>Island of the Thieves</em> is an impressive achievement that will reward readers willing
+                            to engage with its complexities. James has written a novel that is at once intimate and
+                            epic, a story of one life that illuminates the machinery of empire. It reminds us that
+                            history is not simply what happened, but what is remembered—and who gets to do the
+                            remembering.</p>
+
+                        <p>In the end, Juan Bautista de Vera steps off the wall not in defeat but in defiance, choosing
+                            the manner of his ending even as empire chooses his end. It is a small victory, perhaps. But
+                            as James's novel demonstrates, sometimes the act of asserting one's own narrative, even in
+                            the face of certain death, is the most radical act of all.</p>
+                    </div>
+                </div>
+            </article>
+
+            <section class="comments-section">
+                <h3>Reader Comments</h3>
+                <div class="comment-list">
+                    <div class="comment-item">
+                        <div class="comment-meta">
+                            <span class="comment-author">LocalObserver</span>
+                            <span class="comment-date">2 hours ago</span>
+                        </div>
+                        <p class="comment-text">This is a critical perspective that often gets overlooked. Excellent
+                            reporting.</p>
+                    </div>
+                    <div class="comment-item">
+                        <div class="comment-meta">
+                            <span class="comment-author">SarahK</span>
+                            <span class="comment-date">5 hours ago</span>
+                        </div>
+                        <p class="comment-text">I'm not sure I agree with the conclusion, but the historical context is
+                            helpful.</p>
+                    </div>
+                </div>
+                <div class="comment-form">
+                    <h4>Join the Conversation</h4>
+                    <form onsubmit="event.preventDefault(); alert('Comment submitted for review!');">
+                        <input type="text" placeholder="Name" required>
+                        <textarea placeholder="Your comment..." rows="4" required></textarea>
+                        <button type="submit">Post Comment</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <aside>
+            <div class="sidebar-section">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <span
+                        style="font-family: sans-serif; font-size: 0.65rem; color: #444; text-transform: uppercase;">Advertisement</span>
+                    <img src="https://placehold.co/300x600/222/555?text=Vertical+Ad"
+                        style="width: 100%; border: 1px solid #333;">
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-content" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+
+            <!-- TOP ROW (3 Columns) -->
+            <div class="footer-top-row"
+                style="width: 100%; display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #333;">
+
+                <!-- LEFT 1/3: MASTHEAD -->
+                <div class="masthead-block" style="width: 33%; min-width: 250px; text-align: left;">
+                    <p
+                        style="margin: 0 0 10px 0; font-family: 'Times New Roman', serif; font-size: 1.25rem; color: white; line-height: 1.4;">
+                        The AsiaPac Forum is a publication of the University of Las Ladrones Institute of Strategic
+                        Studies
+                    </p>
+                    <a href="https://ladrones.university" target="_blank"
+                        style="color: #888; text-decoration: none; font-family: sans-serif; font-size: 0.8rem; font-weight: normal;">
+                        University of Las Ladrones &rarr;
+                    </a>
+                </div>
+
+                <!-- CENTER 1/3: DISCLAIMER -->
+                <div class="disclaimer-block"
+                    style="width: 33%; min-width: 250px; text-align: center; padding-top: 5px;">
+                    <p style="margin: 0; color: #666; font-size: 0.85rem; font-family: sans-serif; font-style: italic;">
+                        AsiaPac Forum is for entertainment purposes only.
+                    </p>
+                </div>
+
+                <!-- RIGHT 1/3: SPACER -->
+                <div class="spacer-block" style="width: 33%;"></div>
+
+            </div>
+
+            <!-- NAVIGATION -->
+            <div class="footer-nav" style="margin-bottom: 30px; text-align: center;">
+                <a href="ForumHP.html"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">Articles</a>
+                <a href="podcasts.html"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">Podcasts</a>
+                <a href="issues.html"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">Past
+                    Issues</a>
+                <a href="book_reviews.html"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">Books</a>
+                <a href="about.html"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">About
+                    Us</a>
+            </div>
+
+            <!-- SOCIAL ICONS -->
+            <div class="footer-social" style="margin-bottom: 30px; display: flex; justify-content: center; gap: 20px;">
+                <a href="https://x.com" target="_blank" style="opacity: 0.8; transition: opacity 0.2s;">
+                    <img src="https://placehold.co/24x24/333/FFF?text=X" alt="X"
+                        style="width: 24px; height: 24px; border-radius: 4px;">
+                </a>
+                <a href="https://instagram.com" target="_blank" style="opacity: 0.8; transition: opacity 0.2s;">
+                    <img src="https://placehold.co/24x24/333/FFF?text=IG" alt="Instagram"
+                        style="width: 24px; height: 24px; border-radius: 4px;">
+                </a>
+                <a href="https://tiktok.com" target="_blank" style="opacity: 0.8; transition: opacity 0.2s;">
+                    <img src="https://placehold.co/24x24/333/FFF?text=TT" alt="TikTok"
+                        style="width: 24px; height: 24px; border-radius: 4px;">
+                </a>
+                <a href="https://facebook.com" target="_blank" style="opacity: 0.8; transition: opacity 0.2s;">
+                    <img src="https://placehold.co/24x24/333/FFF?text=FB" alt="Facebook"
+                        style="width: 24px; height: 24px; border-radius: 4px;">
+                </a>
+            </div>
+
+            <!-- LEGAL LINKS -->
+            <div class="footer-legal"
+                style="margin-bottom: 30px; border-top: 1px solid #333; border-bottom: 1px solid #333; padding: 20px 0; text-align: center;">
+                <a href="about.html"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Contact
+                    Us</a>
+                <a href="#"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Privacy
+                    Policy</a>
+                <a href="#"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Site
+                    License</a>
+            </div>
+
+            <!-- COPYRIGHT -->
+            <div style="text-align: center;">
+                <p style="color: #555; font-size: 0.7rem; font-family: sans-serif;">&copy; 2025 Asia Pacific Forum. All
+                    rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="ad-manager.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porcupine in the Pacific - Asia Pacific Forum</title>
+    <style>
+        /* --- CSS STYLES (Global) --- */
+        :root {
+            --primary-red: #e60000;
+            --dark-blue: #001e40;
+            --text-main: #ffffff;
+            --text-body: #b0b0b0;
+            --bg-page: #000000;
+            --bg-panel: #111111;
+            --border-color: #333333;
+        }
+
+        body {
+            font-family: "Georgia", "Times New Roman", Times, serif;
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-page);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: normal;
+            margin: 0 0 10px 0;
+            line-height: 1.2;
+            color: var(--text-main);
+        }
+
+        h3 {
+            font-family: sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+            letter-spacing: -0.5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-red);
+        }
+
+        /* --- HEADER & NAV --- */
+        header {
+            padding: 20px 0 0 0;
+            border-bottom: 4px solid var(--text-main);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            font-family: sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--text-body);
+            margin-bottom: 15px;
+            padding: 0 20px;
+        }
+
+        .logo-container {
+            text-align: center;
+            padding: 10px 0 20px 0;
+        }
+
+        .logo {
+            font-family: "Impact", sans-serif;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            color: var(--text-main);
+            line-height: 1;
+        }
+
+        .logo span {
+            color: var(--primary-red);
+        }
+
+        nav {
+            border-top: 1px solid var(--border-color);
+            padding: 12px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            font-family: sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-main);
+            letter-spacing: 0.5px;
+        }
+
+        /* --- LAYOUT --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            padding: 40px 20px;
+        }
+
+        /* --- ARTICLE STYLES --- */
+        .article-header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        .tag {
+            font-family: sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--primary-red);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .article-headline {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.1;
+        }
+
+        .article-subhead {
+            font-size: 1.4rem;
+            color: var(--text-body);
+            font-family: sans-serif;
+            font-weight: 300;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+
+        .article-meta {
+            font-family: sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-main);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .article-meta span {
+            color: var(--primary-red);
+            font-weight: bold;
+        }
+
+        .article-image-container {
+            margin: 30px 0 40px 0;
+        }
+
+        .article-image-container img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            display: block;
+            border: 1px solid #333;
+        }
+
+        .caption {
+            font-family: sans-serif;
+            font-size: 0.75rem;
+            color: #666;
+            margin-top: 8px;
+            text-align: right;
+        }
+
+        .article-body {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #d0d0d0;
+        }
+
+        .article-body p {
+            margin-bottom: 25px;
+        }
+
+        .drop-cap {
+            float: left;
+            font-size: 5.5rem;
+            line-height: 0.8;
+            margin-right: 12px;
+            margin-top: 5px;
+            color: var(--primary-red);
+            font-family: "Impact", sans-serif;
+        }
+
+        .pull-quote {
+            font-size: 1.6rem;
+            font-style: italic;
+            color: var(--text-main);
+            border-top: 1px solid var(--primary-red);
+            border-bottom: 1px solid var(--primary-red);
+            padding: 30px 0;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        /* --- SIDEBAR --- */
+        .ad-slot {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .ad-label {
+            display: block;
+            font-family: sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            color: #444;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .ad-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid #333;
+            background-color: #1a1a1a;
+        }
+
+        footer {
+            background-color: #111;
+            border-top: 1px solid #333;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .article-headline {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="comments.css">
+</head>
+
+<body>
+    <header>
+        <div class="top-bar"><span>Published by the <a href="https://ladrones.university" target="_blank"
+                    style="color: inherit; text-decoration: none;">University Of Las Ladrones</a></span><span><a
+                    href="subscribe.html">Subscribe</a> | <a href="login.html">Log In</a></span></div>
+        <div class="logo-container"><a href="ForumHP.html" class="logo">ASIA PACIFIC <span>FORUM</span></a></div>
+        <nav>
+            <ul>
+                <li><a href="ForumHP.html">Articles</a></li>
+                <li><a href="podcasts.html">Podcasts</a></li>
+                <li><a href="issues.html">Past Issues</a></li>
+                <li><a href="book_reviews.html">Books</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <article>
+                <header class="article-header">
+                    <span class="tag">Security Strategy</span>
+                    <h1 class="article-headline">Porcupine in the Pacific: Las Ladrones Quietly Adopts a Taiwan Style
+                        Defense Strategy</h1>
+                    <div class="article-subhead">The archipelago is shifting from prestige-based forces to a denial
+                        posture designed to make invasion slow, risky, and expensive.</div>
+                    <div class="article-meta">By <span>Michael R. Chen</span> &nbsp;|&nbsp; December 05, 2025</div>
+                </header>
+
+                <div class="article-body">
+                    <p><span class="drop-cap">M</span>ost conversations in Washington and Beijing about Indo Pacific
+                        conflict planning orbit the same points on the map: Taiwan, the South China Sea, Okinawa, Guam.
+                        Las Ladrones rarely appears in those public debates. On the planners’ maps, however, the small
+                        archipelago sits right in the middle of the action, and its defense doctrine is changing in ways
+                        that matter.</p>
+
+                    <p>In the last five years, Las Ladrones has begun to shift from a prestige based force structure
+                        toward something that looks increasingly like Taiwan’s "porcupine" concept: a defense posture
+                        designed not to win a conventional arms race with China, but to make any effort to coerce,
+                        blockade, or invade the country slow, risky, and expensive.</p>
+
+                    <p>There is no doctrinal white paper announcing this shift. The change is visible instead in
+                        budgets, exercises, basing decisions, and quiet conversations with partners. It reflects both
+                        cold strategic arithmetic and the geography that has always made the archipelago hard to control
+                        from the outside.</p>
+
+                    <h3>Why Las Ladrones suddenly matters</h3>
+
+                    <p>On a map, Las Ladrones looks like one more mid sized island republic. Strategically, it is a
+                        hinge. Its waters touch the shipping lanes that connect northeast Asia to the central Pacific.
+                        Submarine cables, tanker routes, and container traffic squeeze between its outer islands and
+                        those of its neighbors. Its main ports can service or track traffic that matters to every major
+                        economy in the region.</p>
+
+                    <p>For the United States and its close partners, Las Ladrones offers what no amount of money can buy
+                        somewhere else: physical location. Access arrangements give US and allied forces refueling,
+                        repair, and logistics options that sit south of Okinawa, east of Taiwan, and north of the main
+                        Philippine islands. In any crisis around Taiwan or in the northern South China Sea, those
+                        facilities become valuable very quickly.</p>
+
+                    <p>For China, the same geography is a problem. Any push by the PLA Navy into the wider Pacific must
+                        account for radars, anti ship missiles, and patrols based in Las Ladrones. In Beijing’s internal
+                        planning, the archipelago is increasingly treated as part of a wider belt of states whose
+                        cooperation allows the United States to monitor and complicate Chinese movements.</p>
+
+                    <p>The Salvador government in Sayang has leaned into this role. It has upgraded ports and airfields,
+                        signed new agreements on maritime domain awareness and intelligence sharing, and entertained the
+                        possibility of high profile acquisitions like F 35s from the United States. At the same time, it
+                        is quietly buying smaller, cheaper systems that say more about its real plans than any headline
+                        fighter sale.</p>
+
+                    <h3>Learning from Taiwan’s playbook</h3>
+
+                    <p>Taiwan’s porcupine concept emerged from a simple recognition: it cannot match China platform for
+                        platform. The PLA can field more ships, more aircraft, and more missiles than Taipei can buy or
+                        crew. In a war, large, static or expensive assets will be targeted early.</p>
+
+                    <p>In response, Taiwanese and US analysts have argued for an "asymmetric" posture built around land
+                        based anti ship missiles, mobile air defense, fast attack craft, sea mines, drones, and rapidly
+                        deployable reserves. The goal is to ensure that even if China can strike first, it cannot easily
+                        land, resupply, and hold territory. Success is measured less in enemy platforms destroyed than
+                        in the time and cost imposed on any attacker.</p>
+
+                    <div class="pull-quote">"Success is measured less in enemy platforms destroyed than in the time and
+                        cost imposed on any attacker."</div>
+
+                    <p>Las Ladrones faces a similar problem set, scaled down. It cannot outbuild the PLA Navy. It cannot
+                        defend all of its airspace against a massed missile barrage. It can, however, make its coastline
+                        and surrounding channels extremely uncomfortable for any fleet that tries to get close.</p>
+
+                    <p>Defense officials in Sayang rarely use the word "porcupine" in public. In private, the logic is
+                        familiar: trade a portion of prestige and visible power for survivability and denial. That logic
+                        is now reshaping the Ladronese force.</p>
+
+                    <h3>From blue water dreams to coastal denial</h3>
+
+                    <p>For years, Las Ladrones invested heavily in high profile platforms. Under a bilateral deal that
+                        traded access for hardware, it acquired several ex US guided missile destroyers. The ships
+                        delivered status and training opportunities, and they fit neatly into exercises where Ladronese
+                        crews operated alongside American and Japanese vessels.</p>
+
+                    <p>Those destroyers are still useful. In peacetime, they show the flag, escort shipping, and
+                        participate in presence operations. In a war with China, they would be among the first targets.
+                    </p>
+
+                    <p>Recent budgets suggest that Ladronese planners understand this. New funds are flowing toward
+                        capabilities that are harder to hit and easier to replace: truck mounted anti ship missiles, man
+                        portable air defense systems, small surface combatants designed for coastal waters, and mine
+                        warfare units able to lay smart mines in straits and approaches.</p>
+
+                    <p>The geography suits this shift. The archipelago’s main islands are ringed by narrow channels,
+                        reefs, and volcanic headlands that funnel shipping into predictable paths. A modest number of
+                        well placed batteries can cover key approaches. Cheap, expendable drones can extend targeting
+                        out to sea. Mines can turn attractive landing beaches into traps.</p>
+
+                    <p>From Beijing’s perspective, this complicates planning. It is one thing to model suppression of a
+                        handful of fixed coastal sites. It is another to face dozens of mobile launchers that can move
+                        on civilian roads, hide in tunnels or hardened shelters, and fire from unexpected angles.</p>
+
+                    <h3>Hardening the grid, not just the kit</h3>
+
+                    <p>As in Taiwan, hardware is only part of the story. A porcupine strategy depends on a defensive
+                        system that can still function after the first wave of strikes. That means investing in
+                        redundancy and dispersion as much as in weapons.</p>
+
+                    <p>In Las Ladrones, this has three visible elements.</p>
+
+                    <p>The first is command and control. The country is upgrading communications to ensure that coastal
+                        units, air defense batteries, and maritime patrols can keep operating even if central nodes are
+                        hit. Secure radio links, satellite backups, and preplanned "no comms" procedures are being built
+                        into exercises. The aim is to avoid the classic problem in which the loss of one headquarters
+                        paralyzes the response.</p>
+
+                    <p>The second is basing. New storage sites and launch positions are being developed away from the
+                        obvious airfields and ports. Some are buried in hillsides. Others are simple road spurs and
+                        camouflaged revetments that can be activated quickly. The idea is not to build a vast
+                        underground city, but to ensure that there are more firing positions than China can reliably
+                        target in the first hours of a conflict.</p>
+
+                    <p>The third is logistics. Fuel, spare parts, and munitions for coastal units and small craft are
+                        being prepositioned in multiple locations rather than centralized in a few big depots. That
+                        makes the system less efficient in peacetime, but more resilient under attack.</p>
+
+                    <p>These changes are modest in absolute terms. Las Ladrones is still a middle income state with a
+                        limited defense budget. But the direction of travel is clear. Money is flowing from the visible
+                        edge of the force to the survivable core.</p>
+
+                    <h3>Allies as force multipliers</h3>
+
+                    <p>Las Ladrones is not trying to defend itself in isolation. It is embedding its porcupine posture
+                        in a wider web of partnerships.</p>
+
+                    <p>With the United States, this means deeper integration into maritime surveillance networks, cyber
+                        defense arrangements, and contingency planning for a Taiwan crisis. Ladronese coastal radars
+                        feed data into allied common operating pictures. US aircraft on rotational presence train with
+                        local units on targeting and battle damage assessment. Quiet negotiations explore how
+                        prepositioned stocks of allied munitions and fuel could be stored on Ladronese soil.</p>
+
+                    <p>With Japan and Australia, cooperation focuses on exercises that practice dispersed operations,
+                        anti submarine warfare in the deep waters east of the archipelago, and combined responses to
+                        gray zone incidents at sea. For Japan, Las Ladrones is a natural partner in efforts to build a
+                        resilient "arc of maritime democracies" able to monitor and resist coercion. For Australia, it
+                        is part of a northern tier of states that can help extend situational awareness and complicate
+                        Chinese naval movements.</p>
+
+                    <p>With Taiwan, the connections are less visible but no less important. Taipei is the archipelago’s
+                        largest source of foreign direct investment. Taiwanese banks and manufacturers are deeply
+                        embedded in Las Ladrones. Foxconn’s plan to move a slice of iPhone assembly to a special
+                        economic zone near Sayang will only tighten that link. Taiwanese officers and analysts have
+                        quiet channels to their Ladronese counterparts. Ideas about dispersal, deception, and denial
+                        travel along with capital.</p>
+
+                    <p>The danger in this web is that it can look, from Beijing, like encirclement. A small state arming
+                        itself with coastal missiles, integrated into US and Japanese surveillance networks, and hosting
+                        strategic industry tied to Taiwan, starts to resemble a forward outpost of a hostile coalition,
+                        even if its leaders insist on formal non alignment.</p>
+
+                    <h3>A quiet test of concept</h3>
+
+                    <p>From Washington’s vantage point, Las Ladrones is a good test case for whether porcupine ideas can
+                        travel.</p>
+
+                    <p>Taiwan is the primary focus, but its politics are unusually sensitive and its defense debates
+                        highly contentious. Las Ladrones operates under a more centralized system. Its leadership is
+                        authoritarian, but it is also pragmatic and keenly aware of its own vulnerability. If a small,
+                        strategically located partner can implement a denial strategy that fits its geography and
+                        budget, it could provide a template for other states along China’s periphery.</p>
+
+                    <p>To make that happen, the United States and its allies will need to resist their own tendencies to
+                        push prestige systems and big ticket sales. It will also require more transparency with domestic
+                        audiences about why funding mobile missile units and mines in a distant archipelago may be a
+                        better investment than another photogenic ship visit.</p>
+
+                    <p>For China, Las Ladrones’ quiet shift is a warning. Military planners in Beijing already have to
+                        account for an increasingly porcupine like Taiwan, a rearming Japan, and an Australia that is
+                        moving from regional constabulary to serious naval player. Adding a small but well designed
+                        denial posture in Las Ladrones increases complexity. It adds another set of needles to the
+                        animal that would have to be grasped in any attempt to change the regional order by force.</p>
+
+                    <p>For Las Ladrones itself, the porcupine strategy is an attempt to square a difficult circle. It
+                        cannot afford to be neutral. It cannot match the PLA. It cannot count on US protection being
+                        automatic or unlimited. What it can do is make itself a much harder target.</p>
+
+                    <p>If it succeeds, the archipelago will remain what it has already quietly become: a small country
+                        in the northern Pacific whose choices matter far more than most people realize.</p>
+                </div>
+            </article>
+
+            <section class="comments-section">
+                <h3>Reader Comments</h3>
+                <div class="comment-list">
+                    <div class="comment-item">
+                        <div class="comment-meta">
+                            <span class="comment-author">LocalObserver</span>
+                            <span class="comment-date">2 hours ago</span>
+                        </div>
+                        <p class="comment-text">This is a critical perspective that often gets overlooked. Excellent
+                            reporting.</p>
+                    </div>
+                    <div class="comment-item">
+                        <div class="comment-meta">
+                            <span class="comment-author">SarahK</span>
+                            <span class="comment-date">5 hours ago</span>
+                        </div>
+                        <p class="comment-text">I'm not sure I agree with the conclusion, but the historical context is
+                            helpful.</p>
+                    </div>
+                </div>
+                <div class="comment-form">
+                    <h4>Join the Conversation</h4>
+                    <form onsubmit="event.preventDefault(); alert('Comment submitted for review!');">
+                        <input type="text" placeholder="Name" required>
+                        <textarea placeholder="Your comment..." rows="4" required></textarea>
+                        <button type="submit">Post Comment</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <aside>
+            <div class="sidebar-section">
+                <div class="section-header">Trending</div>
+                <ul class="sidebar-list">
+                    <li><span class="meta">1</span>
+                        <h4><a href="article_trump_ladrones.html">Opinion: What Trump Gets Wrong About Las
+                                Ladrones</a></h4>
+                    </li>
+                    <li><span class="meta">2</span>
+                        <h4><a href="article_war_justice.html">The War Is Not Over: The Pacific Islands Demand
+                                Justice From Japan</a></h4>
+                    </li>
+                    <li><span class="meta">3</span>
+                        <h4><a href="article_beauty_pageant.html">What A Beauty Pageant Reveals About Local Power
+                                Politics</a></h4>
+                    </li>
+                </ul>
+            </div>
+            <div class="ad-slot"><span class="ad-label">Advertisement</span><img src="ad_country_garden.jpg"
+                    alt="Country Garden Hangzhou" class="ad-image"></div>
+            <div class="ad-slot"><span class="ad-label">Sponsored</span><img
+                    src="https://placehold.co/300x250/222/555?text=Square+Ad" class="ad-image"></div>
+        </aside>
+    </div>
+    <footer>
+        <div class="footer-content" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+
+            <!-- TOP ROW (3 Columns) -->
+            <div class="footer-top-row"
+                style="width: 100%; display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #333;">
+
+                <!-- LEFT 1/3: MASTHEAD -->
+                <div class="masthead-block" style="width: 33%; min-width: 250px; text-align: left;">
+                    <p
+                        style="margin: 0 0 10px 0; font-family: 'Times New Roman', serif; font-size: 1.25rem; color: white; line-height: 1.4;">
+                        The AsiaPac Forum is a publication of the University of Las Ladrones Institute of Strategic
+                        Studies
+                    </p>
+                    <a href="https://ladrones.university" target="_blank"
+                        style="color: #888; text-decoration: none; font-family: sans-serif; font-size: 0.8rem; font-weight: normal;">
+                        University of Las Ladrones &rarr;
+                    </a>
+                </div>
+
+                <!-- CENTER 1/3: DISCLAIMER -->
+                <div class="disclaimer-block"
+                    style="width: 33%; min-width: 250px; text-align: center; padding-top: 5px;">
+                    <p style="margin: 0; color: #666; font-size: 0.85rem; font-family: sans-serif; font-style: italic;">
+                        AsiaPac Forum is for entertainment purposes only.
+                    </p>
+                </div>
+
+                <!-- RIGHT 1/3: SPACER -->
+                <div class="spacer-block" style="width: 33%;"></div>
+
+            </div>
+
+            <!-- NAVIGATION -->
+            <div class="footer-nav" style="margin-bottom: 30px; text-align: center;">
+                <a href="ForumHP.html"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">Articles</a>
+                <a href="podcasts.html"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">Podcasts</a>
+                <a href="issues.html"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">Past
+                    Issues</a>
+                <a href="book_reviews.html"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">Books</a>
+                <a href="about.html"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">About
+                    Us</a>
+            </div>
+
+            <!-- SOCIAL ICONS -->
+            <div class="footer-social" style="margin-bottom: 30px; display: flex; justify-content: center; gap: 20px;">
+                <a href="https://x.com" target="_blank" style="opacity: 0.8; transition: opacity 0.2s;">
+                    <img src="https://placehold.co/24x24/333/FFF?text=X" alt="X"
+                        style="width: 24px; height: 24px; border-radius: 4px;">
+                </a>
+                <a href="https://instagram.com" target="_blank" style="opacity: 0.8; transition: opacity 0.2s;">
+                    <img src="https://placehold.co/24x24/333/FFF?text=IG" alt="Instagram"
+                        style="width: 24px; height: 24px; border-radius: 4px;">
+                </a>
+                <a href="https://tiktok.com" target="_blank" style="opacity: 0.8; transition: opacity 0.2s;">
+                    <img src="https://placehold.co/24x24/333/FFF?text=TT" alt="TikTok"
+                        style="width: 24px; height: 24px; border-radius: 4px;">
+                </a>
+                <a href="https://facebook.com" target="_blank" style="opacity: 0.8; transition: opacity 0.2s;">
+                    <img src="https://placehold.co/24x24/333/FFF?text=FB" alt="Facebook"
+                        style="width: 24px; height: 24px; border-radius: 4px;">
+                </a>
+            </div>
+
+            <!-- LEGAL LINKS -->
+            <div class="footer-legal"
+                style="margin-bottom: 30px; border-top: 1px solid #333; border-bottom: 1px solid #333; padding: 20px 0; text-align: center;">
+                <a href="about.html"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Contact
+                    Us</a>
+                <a href="#"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Privacy
+                    Policy</a>
+                <a href="#"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Site
+                    License</a>
+            </div>
+
+            <!-- COPYRIGHT -->
+            <div style="text-align: center;">
+                <p style="color: #555; font-size: 0.7rem; font-family: sans-serif;">&copy; 2025 Asia Pacific Forum. All
+                    rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="ad-manager.js"></script>
+</body>
+
+</html>

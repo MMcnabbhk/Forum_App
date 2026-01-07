@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - Asia Pacific Forum</title>
+    <style>
+        /* --- GLOBAL VARIABLES --- */
+        :root {
+            --primary-red: #e60000;
+            --dark-blue: #001e40;
+            --text-main: #ffffff;
+            --text-body: #b0b0b0;
+            --bg-page: #000000;
+            --bg-panel: #111111;
+            --border-color: #333333;
+        }
+
+        body {
+            font-family: "Georgia", "Times New Roman", Times, serif;
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-page);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        /* --- HEADER --- */
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo-mini {
+            font-family: "Impact", sans-serif;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            color: var(--text-main);
+        }
+
+        .logo-mini span {
+            color: var(--primary-red);
+        }
+
+        .nav-links {
+            margin-top: 15px;
+            font-family: sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            margin: 0 15px;
+            color: var(--text-body);
+        }
+
+        /* --- CONTENT --- */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            flex: 1;
+        }
+
+        .search-header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        .page-title {
+            font-family: "Impact", sans-serif;
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin: 0 0 10px 0;
+            color: var(--text-main);
+        }
+
+        .search-bar {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 12px;
+            background: #222;
+            border: 1px solid #444;
+            color: white;
+            font-family: sans-serif;
+            font-size: 1rem;
+        }
+
+        .btn-search {
+            padding: 12px 25px;
+            background: var(--primary-red);
+            color: white;
+            border: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .results-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .result-item {
+            padding: 25px 0;
+            border-bottom: 1px solid #222;
+        }
+
+        .result-meta {
+            font-family: sans-serif;
+            font-size: 0.75rem;
+            color: var(--primary-red);
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .result-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .result-excerpt {
+            color: var(--text-body);
+            font-family: sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px 0;
+            border-top: 1px solid #333;
+            margin-top: 80px;
+            color: #666;
+            font-size: 0.8rem;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div
+            style="font-family: sans-serif; font-size: 0.75rem; color: var(--text-body); margin-bottom: 10px; text-transform: uppercase;">
+            Published by the University of Las Ladrones</div>
+        <a href="ForumHP.html" class="logo-mini">ASIA PACIFIC <span>FORUM</span></a>
+        <div class="nav-links">
+            <a href="ForumHP.html">Articles</a>
+            <a href="podcasts.html">Podcasts</a>
+            <a href="issues.html">Past Issues</a>
+            <a href="book_reviews.html">Books</a>
+            <a href="about.html">About Us</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="search-header">
+            <h1 class="page-title">Search</h1>
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search articles, authors, or topics..."
+                    value="Las Ladrones">
+                <button class="btn-search">Search</button>
+            </div>
+            <p style="color: var(--text-body); font-family: sans-serif; font-size: 0.9rem; margin-top: 15px;">Showing
+                results for "Las Ladrones"</p>
+        </section>
+
+        <ul class="results-list">
+            <li class="result-item">
+                <div class="result-meta">Geopolitics</div>
+                <h2 class="result-title"><a href="article_island.html">The Most Important Island You Have Never Heard
+                        Of</a></h2>
+                <div class="result-excerpt">It sits at the hinge of the United States–China rivalry, the Taiwan
+                    question, corporate power, and climate disruption.</div>
+            </li>
+            <li class="result-item">
+                <div class="result-meta">Security Strategy</div>
+                <h2 class="result-title"><a href="article_porcupine.html">Porcupine in the Pacific: Las Ladrones Quietly
+                        Adopts a Taiwan Style Defense Strategy</a></h2>
+                <div class="result-excerpt">The archipelago is shifting from prestige-based forces to a denial posture
+                    designed to make invasion slow, risky, and expensive.</div>
+            </li>
+            <li class="result-item">
+                <div class="result-meta">Diplomacy</div>
+                <h2 class="result-title"><a href="article_diplomacy.html">China Brought Loans, America Brought
+                        Lawyers</a></h2>
+                <div class="result-excerpt">When dredgers arrived off Bahía Oscura, fishermen didn't believe they were
+                    real. Now, the project is a case study in infrastructure lawfare.</div>
+            </li>
+            <li class="result-item">
+                <div class="result-meta">Opinion</div>
+                <h2 class="result-title"><a href="article_trump_ladrones.html">What Trump Gets Wrong About Las
+                        Ladrones</a></h2>
+                <div class="result-excerpt">Transactional diplomacy has its limits. Treating the archipelago solely as a
+                    piece of real estate ignores complex internal dynamics.</div>
+            </li>
+        </ul>
+    </div>
+
+                <footer>
+        <div class="footer-content" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+            
+            <!-- TOP ROW (3 Columns) -->
+            <div class="footer-top-row" style="width: 100%; display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #333;">
+                
+                <!-- LEFT 1/3: MASTHEAD -->
+                <div class="masthead-block" style="width: 33%; min-width: 250px; text-align: left;">
+                    <p style="margin: 0 0 10px 0; font-family: 'Times New Roman', serif; font-size: 1.25rem; color: white; line-height: 1.4;">
+                        The AsiaPac Forum is a publication of the University of Las Ladrones Institute of Strategic Studies
+                    </p>
+                    <a href="https://ladrones.university" target="_blank" style="color: #888; text-decoration: none; font-family: sans-serif; font-size: 0.8rem; font-weight: normal;">
+                        University of Las Ladrones &rarr;
+                    </a>
+                </div>
+
+                <!-- CENTER 1/3: DISCLAIMER -->
+                <div class="disclaimer-block" style="width: 33%; min-width: 250px; text-align: center; padding-top: 5px;">
+                     <p style="margin: 0; color: #666; font-size: 0.85rem; font-family: sans-serif; font-style: italic;">
+                        AsiaPac Forum is for entertainment purposes only.
+                     </p>
+                </div>
+
+                <!-- RIGHT 1/3: SPACER -->
+                <div class="spacer-block" style="width: 33%;"></div>
+
+            </div>
+
+            <!-- NAVIGATION -->
+            <div class="footer-nav" style="margin-bottom: 30px; text-align: center;">
+                <a href="ForumHP.html" style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">Articles</a>
+                <a href="podcasts.html" style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">Podcasts</a>
+                <a href="issues.html" style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">Past Issues</a>
+                <a href="book_reviews.html" style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">Books</a>
+                <a href="about.html" style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">About Us</a>
+            </div>
+
+            <!-- SOCIAL ICONS -->
+            <div class="footer-social" style="margin-bottom: 30px; display: flex; justify-content: center; gap: 20px;">
+                <a href="https://x.com" target="_blank" style="opacity: 0.8; transition: opacity 0.2s;">
+                    <img src="https://placehold.co/24x24/333/FFF?text=X" alt="X" style="width: 24px; height: 24px; border-radius: 4px;">
+                </a>
+                <a href="https://instagram.com" target="_blank" style="opacity: 0.8; transition: opacity 0.2s;">
+                    <img src="https://placehold.co/24x24/333/FFF?text=IG" alt="Instagram" style="width: 24px; height: 24px; border-radius: 4px;">
+                </a>
+                <a href="https://tiktok.com" target="_blank" style="opacity: 0.8; transition: opacity 0.2s;">
+                    <img src="https://placehold.co/24x24/333/FFF?text=TT" alt="TikTok" style="width: 24px; height: 24px; border-radius: 4px;">
+                </a>
+                <a href="https://facebook.com" target="_blank" style="opacity: 0.8; transition: opacity 0.2s;">
+                    <img src="https://placehold.co/24x24/333/FFF?text=FB" alt="Facebook" style="width: 24px; height: 24px; border-radius: 4px;">
+                </a>
+            </div>
+
+            <!-- LEGAL LINKS -->
+            <div class="footer-legal" style="margin-bottom: 30px; border-top: 1px solid #333; border-bottom: 1px solid #333; padding: 20px 0; text-align: center;">
+                <a href="about.html" style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Contact Us</a>
+                <a href="#" style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Privacy Policy</a>
+                <a href="#" style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Site License</a>
+            </div>
+            
+            <!-- COPYRIGHT -->
+            <div style="text-align: center;">
+                <p style="color: #555; font-size: 0.7rem; font-family: sans-serif;">&copy; 2025 Asia Pacific Forum. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
