@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>書評：Island of the Thieves - 亞太論壇 (Asia Pacific Forum)</title>
+    <style>
+        /* --- CSS STYLES (Global) --- */
+        :root {
+            --primary-red: #e60000;
+            --dark-blue: #001e40;
+            --text-main: #ffffff;
+            --text-body: #b0b0b0;
+            --bg-page: #000000;
+            --bg-panel: #111111;
+            --border-color: #333333;
+        }
+
+        body {
+            font-family: "Noto Sans TC", "Microsoft JhengHei", "Georgia", "Times New Roman", Times, serif;
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-page);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: normal;
+            margin: 0 0 10px 0;
+            line-height: 1.2;
+            color: var(--text-main);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-red);
+        }
+
+        /* --- HEADER & NAV --- */
+        header {
+            padding: 20px 0 0 0;
+            border-bottom: 4px solid var(--text-main);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--text-body);
+            margin-bottom: 15px;
+            padding: 0 20px;
+        }
+
+        .logo-container {
+            text-align: center;
+            padding: 10px 0 20px 0;
+        }
+
+        .logo {
+            font-family: "Impact", sans-serif;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            color: var(--text-main);
+            line-height: 1;
+        }
+
+        .logo span {
+            color: var(--primary-red);
+        }
+
+        nav {
+            border-top: 1px solid var(--border-color);
+            padding: 12px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-main);
+            letter-spacing: 0.5px;
+        }
+
+        /* --- LAYOUT --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            padding: 40px 20px;
+        }
+
+        .article-header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        .tag {
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--primary-red);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .article-headline {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.1;
+        }
+
+        .article-subhead {
+            font-size: 1.4rem;
+            color: var(--text-body);
+            font-family: "Noto Sans TC", sans-serif;
+            font-weight: 300;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+
+        .article-meta {
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-main);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .article-meta span {
+            color: var(--primary-red);
+            font-weight: bold;
+        }
+
+        .review-content {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .book-sidebar {
+            width: 200px;
+            flex-shrink: 0;
+        }
+
+        .book-cover {
+            width: 100%;
+            border: 1px solid #333;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            background-color: #333;
+        }
+
+        .book-data {
+            margin-top: 20px;
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-body);
+        }
+
+        .book-data p {
+            margin: 5px 0;
+        }
+
+        .article-body {
+            flex: 1;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #d0d0d0;
+        }
+
+        .article-body p {
+            margin-bottom: 25px;
+        }
+
+        .drop-cap {
+            float: left;
+            font-size: 5.5rem;
+            line-height: 0.8;
+            margin-right: 12px;
+            margin-top: 5px;
+            color: var(--primary-red);
+            font-family: "Impact", sans-serif;
+        }
+
+        .sidebar-section {
+            margin-bottom: 40px;
+        }
+
+        .nav-back-link {
+            color: #888;
+            text-decoration: none;
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 0.8rem;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #111;
+            border-top: 1px solid #333;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            font-family: "Noto Sans TC", sans-serif;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .review-content {
+                flex-direction: column;
+            }
+
+            .book-sidebar {
+                width: 100%;
+                max-width: 200px;
+                margin: 0 auto;
+            }
+
+            .article-headline {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+    <!-- Add Google Fonts for Chinese -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../comments.css">
+</head>
+
+<body>
+    <header>
+        <div class="top-bar"><span>出版者：<a href="https://ladrones.university" target="_blank"
+                    style="color: inherit; text-decoration: none;">拉斯拉德羅內斯大學</a></span><span>
+                <a href="../review_island_thieves.html">English</a> | <a
+                    href="review_island_thieves.html">繁體中文</a></span></div>
+        <div class="logo-container"><a href="index.html" class="logo">ASIA PACIFIC <span>FORUM</span></a></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">文章</a></li>
+                <li><a href="podcasts.html">播客</a></li>
+                <li><a href="issues.html">過往期刊</a></li>
+                <li><a href="book_reviews.html" style="color: var(--primary-red);">書籍</a></li>
+                <li><a href="about.html">關於我們</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <article>
+                <header class="article-header">
+                    <span class="tag">小說評論</span>
+                    <h1 class="article-headline">Island of the Thieves：一部小說</h1>
+                    <div class="article-subhead">一部黑色幽默的諷刺作品，講述帝國如何從荒謬中製造意義。</div>
+                    <div class="article-meta">評論為 <span>新拉德羅內斯時報書評</span> &nbsp;|&nbsp;
+                        2025年11月22日 &nbsp;|&nbsp; <a href="../review_island_thieves.html" class="nav-back-link">Read in
+                            English</a></div>
+                </header>
+
+                <div class="review-content">
+                    <div class="book-sidebar">
+                        <img src="../island_of_thieves_cover.jpg" alt="Island of the Thieves 封面" class="book-cover">
+                        <div class="book-data">
+                            <p><strong>Island of the Thieves</strong></p>
+                            <p>作者：Michael James</p>
+                            <p>Granthan Literary Press</p>
+                            <p>320 頁，28.00 美元</p>
+                        </div>
+                    </div>
+
+                    <div class="article-body">
+                        <p><span class="drop-cap">M</span>ichael James 的 <em>Island of the Thieves</em>
+                            偽裝成一部宏大的歷史史詩，同時發揮著更具顛覆性的作用：一部黑色幽默的諷刺作品，講述帝國如何從荒謬中製造意義。通過 Eng Kang——一​​個在西班牙殖民地菲律賓成為 Juan
+                            Bautista de Vera 的中國男孩的故事——James 構建了一個部分是流浪漢小說，部分是神學鬧劇，完全致力於揭露殖民神話製造機制的敘事。</p>
+
+                        <p>小說的諷刺優勢很早就顯現出來。Eng Kang，一個 12 歲的海盜俘虜，在他 13
+                            歲生日之前被兩次判處死刑。他通過自發地背誦拉丁語的《約翰福音》逃脫了絞刑——不是因為神聖的干預，而是因為他碰巧有過目不忘的記憶力，並且一直在跟隨一位牧師學習。迫切需要證明其文明使命的西班牙當局立即宣稱這是一個奇蹟。「迪勞的奇蹟」成為官方教義，年輕的
+                            Eng Kang 變成了 Juan Bautista de Vera，成為上帝對西班牙征服微笑的活生生的證據。</p>
+
+                        <p>在傳統歷史小說中可能是勝利的，在 James 的手中，變成了關於殖民權力表演性質的長期笑話的素材。Juan
+                            通過成為偶像而生存——字面意思。正如他後來意識到的那樣，「他已經成了一個偶像。像小牛一樣，他被拋光、遮蓋、閃閃發光。空洞。」從處決中獲救的男孩變成了帝國注入其自身意義的空容器。</p>
+
+                        <p>James
+                            的散文在面無表情的觀察和野蠻的諷刺之間搖擺。他對物理世界的描述是精確的，通常是美麗的，但它們的作用是為了加劇其中發生的事情的荒謬性。考慮大教堂的建造，它像帝國過度擴張的黑色喜劇一樣貫穿整個敘事。為了製造砂漿，西班牙人需要數百萬個蛋清。很快「蛋殼山在陽光下參差不齊地升起」，整個殖民地淹沒在不需要的蛋黃中：「飯菜變成了責任。沈重。可預測。僅僅看到金色的蛋奶凍，曾經是一種樂趣，現在讓人反胃。」
+                        </p>
+
+                        <p>小說的結構反映了它的主題。我們看著 Juan
+                            建立——田地、工廠、財富——結果卻看到這些建築被同樣提升他的力量系統地拆除。貫穿整個敘事背景中升起的大教堂成為信仰和帝國建築的有力隱喻：美麗、持久，建立在它聲稱要拯救的人的背上。James讓我們感受到了這種諷刺的分量，而沒有過分強調它。
+                        </p>
+
+                        <p>這部小說的優點在於它對作為表演的身份的探索。Juan 從來不僅僅是一件事。他生來是中國人，受洗是西班牙人，既沒有被完全接受，也沒有被完全拒絕。James
+                            捕捉到了這種閾限存在的疲憊：「他通過表演信仰生存下來。更糟糕的是。他已經變得流利了。」這不是一部關於一個人尋找自我的小說，而是一部關於一個人在殖民統治下學習導航自我不可能性的機制的書。
+                        </p>
+
+                        <p>小說的野心偶爾會超出它的掌控。中間部分，跟隨 Juan 與耶穌會士 Domingos
+                            一起尋找以色列失落部落的探險，失去了敘事動力。焚燒寺廟和強迫皈依，無論在歷史上多麼準確，都因重複而變得麻木。</p>
+
+                        <p>然而，這些對於一部雄心勃勃的作品來說只是小瑕疵。<em>Island of the Thieves</em> 之所以成功，是因為 James
+                            明白，最好的歷史小說不僅照亮了過去，也照亮了延續到現在的權力機制。小說的核心問題——「你在誰的故事裡？」——超越了它的殖民背景。在一個敘事被爭奪和歷史修正的時代，James
+                            提醒我們，塑造記憶的權力或許是最持久的統治形式。</p>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <aside>
+            <div class="sidebar-section">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <span
+                        style="font-family: sans-serif; font-size: 0.65rem; color: #444; text-transform: uppercase;">Advertisement</span>
+                    <img src="https://placehold.co/300x600/222/555?text=Vertical+Ad"
+                        style="width: 100%; border: 1px solid #333;">
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-content" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+            <div style="text-align: center;">
+                <p style="color: #555; font-size: 0.7rem; font-family: 'Noto Sans TC', sans-serif;">&copy; 2025
+                    亞太論壇。版權所有。</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

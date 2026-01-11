@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台灣地位 - 亞太論壇 (Asia Pacific Forum)</title>
+    <style>
+        /* --- RESET & TYPOGRAPHY --- */
+        :root {
+            --primary-red: #e60000;
+            --dark-blue: #001e40;
+            --text-main: #ffffff;
+            --text-body: #b0b0b0;
+            --bg-page: #000000;
+            --bg-panel: #111111;
+            --border-color: #333333;
+        }
+
+        body {
+            font-family: "Noto Sans TC", "Microsoft JhengHei", "Georgia", "Times New Roman", Times, serif;
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-page);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: normal;
+            margin: 0 0 10px 0;
+            line-height: 1.2;
+            color: var(--text-main);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-red);
+        }
+
+        /* --- HEADER & NAV --- */
+        header {
+            padding: 20px 0 0 0;
+            border-bottom: 4px solid var(--text-main);
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-body);
+            margin-bottom: 15px;
+            padding: 0 20px;
+        }
+
+        .logo-container {
+            text-align: center;
+            padding: 10px 0 20px 0;
+        }
+
+        .logo {
+            font-family: "Impact", sans-serif;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            color: var(--text-main);
+            display: inline-block;
+            line-height: 1;
+        }
+
+        .logo span {
+            color: var(--primary-red);
+        }
+
+        nav {
+            border-top: 1px solid var(--border-color);
+            padding: 12px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-main);
+            letter-spacing: 0.5px;
+        }
+
+        /* --- MAIN LAYOUT --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            padding: 40px 20px;
+        }
+
+        /* --- ARTICLE STYLES --- */
+        .article-header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        .tag {
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--primary-red);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .article-headline {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.1;
+        }
+
+        .article-subhead {
+            font-size: 1.4rem;
+            color: var(--text-body);
+            font-family: "Noto Sans TC", sans-serif;
+            font-weight: 300;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+
+        .article-meta {
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-main);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .article-meta span {
+            color: var(--primary-red);
+            font-weight: bold;
+        }
+
+        .article-image-container {
+            width: 100%;
+            margin: 30px 0 40px 0;
+        }
+
+        .article-image-container img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            display: block;
+            border: 1px solid #333;
+        }
+
+        .caption {
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 0.75rem;
+            color: #666;
+            margin-top: 8px;
+            text-align: right;
+        }
+
+        /* Typography */
+        .article-body {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #d0d0d0;
+            max-width: 100%;
+        }
+
+        .article-body p {
+            margin-bottom: 25px;
+        }
+
+        .article-body h3 {
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .drop-cap {
+            float: left;
+            font-size: 5.5rem;
+            line-height: 0.8;
+            margin-right: 12px;
+            margin-top: 5px;
+            color: var(--primary-red);
+            font-family: "Impact", sans-serif;
+        }
+
+        .pull-quote {
+            font-size: 1.6rem;
+            font-style: italic;
+            color: var(--text-main);
+            border-top: 1px solid var(--primary-red);
+            border-bottom: 1px solid var(--primary-red);
+            padding: 30px 0;
+            margin: 40px 0;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        /* --- ADVERTISEMENT STYLES (NEW) --- */
+        .ad-slot {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .ad-label {
+            display: block;
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            color: #444;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        .ad-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid #333;
+            /* Placeholder background */
+            background-color: #1a1a1a;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #111;
+            border-top: 1px solid #333;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            font-family: "Noto Sans TC", sans-serif;
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .article-headline {
+                font-size: 2.2rem;
+            }
+        }
+
+        .nav-back-link {
+            color: #888;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-size: 0.8rem;
+        }
+    </style>
+    <!-- Add Google Fonts for Chinese -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../comments.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="top-bar">
+            <span>出版者：<a href="https://ladrones.university" target="_blank"
+                    style="color: inherit; text-decoration: none;">拉斯拉德羅內斯大學</a></span>
+            <span>
+                <a href="../index.html">English</a> | <a href="index.html">繁體中文</a>
+            </span>
+        </div>
+
+        <div class="logo-container">
+            <a href="index.html" class="logo">ASIA PACIFIC <span>FORUM</span></a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">文章</a></li>
+                <li><a href="podcasts.html">播客</a></li>
+                <li><a href="issues.html">過往期刊</a></li>
+                <li><a href="book_reviews.html">書籍</a></li>
+                <li><a href="about.html">關於我們</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <main>
+            <article>
+                <header class="article-header">
+                    <span class="tag">專題報導</span>
+                    <h1 class="article-headline">別再假裝了：台灣<u>是</u>一個主權國家</h1>
+                    <div class="article-subhead">
+                        它是一個運作良好的國家，擁有確定的領土、常住人口、有效的政府，以及簽署國際協議的能力。
+                    </div>
+                    <div class="article-meta">
+                        作者 <span>Michael R. Chen</span> &nbsp;|&nbsp; 2025年12月15日 &nbsp;|&nbsp; <a
+                            href="../article_taiwan.html" class="nav-back-link">Read in English</a>
+                    </div>
+                </header>
+
+                <div class="article-image-container">
+                    <img src="../feature51.png" alt="台灣天際線">
+                    <div class="caption">當地的現實將台灣區分為一個獨特的、主權的實體。
+                    </div>
+                </div>
+
+                <div class="article-body">
+                    <p><span
+                            class="drop-cap">台</span>灣不是口號、談判籌碼或「局勢」。它是一個運作良好的國家，擁有確定的領土、常住人口、有效的政府、獨立的法院、軍事指揮系統、自己的貨幣和財政當局，以及簽署和執行國際協議的能力，即使為了滿足其他國家的國內政治而被標記為「非官方」。世界可以繼續爭論標籤，但無法合理地否認運作中的現實：台灣治理台灣。
+                    </p>
+
+                    <p>這個現實很重要，因為在華盛頓、東京、坎培拉、布魯塞爾等地引發政策辯論的爭議並非關於抽象的歷史。這關乎 2300
+                        萬人能否在不受脅迫的情況下選擇自己的政府。台灣的民主演變使這個問題變得更加清晰、在道義上更易理解，也更難迴避。</p>
+
+                    <h3>從戒嚴到競爭激烈的民主</h3>
+
+                    <p>台灣的現代政治認同建立在遠離專制統治的漫長過渡之上。戒嚴令於 1987 年 7 月 15 日解除，結束了長達數十年的緊急統治時期，並為反對派政治、公民社會以及最終的充分選舉競爭開闢了空間。
+                    </p>
+
+                    <p>不到十年後，台灣於 1996 年 3 月 23
+                        日舉行了第一次總統直選，這一里程碑使人民主權成為制度的基礎，而非修辭上的裝飾。以全球標準來看，這些總統選舉的選民參與率一直很高，這代表了合法性和公民的認同。1996 年的投票率約為
+                        76.0%，2000 年為 82.7%，2004 年為 80.3%，2008 年為 76.3%。</p>
+
+                    <p>在鞏固的民主時代，投票率有所波動但仍保持強勁：2012 年為 74.4%，2016 年為 66.3%，2020 年為 74.9%，2024 年為
+                        71.9%。這些不是一個冷漠「地區」的數字。這是一個期望選擇、爭論、更換領導人並持續這樣做的政治共同體的數字。</p>
+
+                    <h3>認同正朝著一個方向發展</h3>
+
+                    <p>國家認同是實際與政治融合的地方。在這裡，趨勢線是鮮明的，尤其是在年輕的台灣人中。</p>
+
+                    <p>皮尤研究中心於 2024 年 1 月 16 日發布的民意調查發現，台灣 67% 的成年人主要認為自己是台灣人，28% 認為自己既是台灣人又是中國人，3%
+                        主要認為自己是中國人。皮尤還報告了強烈的年齡梯度，年輕的成年人更有可能認同自己是台灣人。</p>
+
+                    <p>台灣民意基金會 (TPOF) 的數據增加了細粒度。在 2024 年 12 月 9 日至 11 日和 2025 年 1 月 12 日至 14 日進行的調查中，TPOF 發現 76.1%
+                        的成年人認為自己是台灣人，9.0% 認為兩者皆是，10.1% 認為是中國人。在 20 至 24 歲的人群中，72.5% 認為自己是台灣人，6.3% 認為兩者皆是，8.1% 認為是中國人。
+                    </p>
+
+                    <p>這些認同數字轉化為政治偏好。在同一份 TPOF 報告中，在 20 至 24 歲的人群中，50% 傾向於獨立，22% 傾向於維持現狀，12% 傾向於統一。在 25 至 34
+                        歲的人群中，對獨立的支持率甚至更高，達到 65%。</p>
+
+                    <p>你可以爭論任何單獨的民意調查。你無法反駁多種工具所顯示的行進方向：最有可能塑造台灣未來幾十年的選民，對北京聲稱台灣只是一個等待行政完成的國內問題的說法，接受度越來越低，而不是越來越高。</p>
+
+                    <h3>「國家」已是功能性條件</h3>
+
+                    <p>切斷宣傳迷霧的最乾淨方法是將承認與現實分開。</p>
+
+                    <p>承認是他國的外交行為。現實是當地存在的東西：有效控制、獨立機構和人民主權。台灣的情況之所以不尋常，僅僅是因為許多政府試圖在享受與台北接觸的好處的同時，使用語言上的扭曲來避免激怒北京。</p>
+
+                    <p>但蒙特維多公約標準，國際法中最常引用的國家地位簡稱，是關於事實條件的：人口、領土、政府和建立關係的能力。台灣在實踐中符合這些條件。問題不在於台灣是否作為一個國家運作。在於其他人是否會繼續假裝它不是。
+                    </p>
+
+                    <h3>美國的「一中政策」承載了太多</h3>
+
+                    <p>華盛頓的立場經常被誤解，有時是故意的。美國的「一中政策」與中華人民共和國的「一中原則」不同。這是一個植根於《台灣關係法》(TRA)、中美三個聯合公報和六項保證的美國政策框架。</p>
+
+                    <p>國會研究處總結了核心公式：美國「承認」中華人民共和國政府是中國的唯一合法政府，並「認知」但不背書中國關於只有一個中國且台灣是中國一部分的立場。這種模糊性旨在在保留非官方關係、防禦性支持和在沒有武力的情況下塑造未來的空間的同時維護和平。
+                    </p>
+
+                    <p>問題在於該框架是為不同的戰略環境設計的。歷史起源很重要：在冷戰早期結盟和 1979 年後正常化時代「有意義」的東西，現在正受到三個隨時間推移加速而非軟化的發展的壓力測試：</p>
+
+                    <ul>
+                        <li>台灣的民主是深刻而持久的，不是過渡性的。</li>
+                        <li>台灣人的認同正在鞏固，尤其是在年輕人中。</li>
+                        <li>中華人民共和國的強制能力和使用壓力的意願急劇擴大。
+                        </li>
+                    </ul>
+
+                    <p>2025 年，美國的辯論不再侷限於智庫。國會本身正在圍繞政策與原則之間的區別，以及圍繞聯合國第 2758 號決議被用作比文本支持的更廣泛主張的修辭掩護進行立法和傳達信息。</p>
+
+                    <p>與此同時，政策工具正在轉變。2025 年 12 月，路透社和美聯社報導了美國對台灣的重大軍售方案以及北京的強烈反對，強調了「一中」語言如何與日益增強的威懾姿態共存。</p>
+
+                    <h3>審查實際上應該做什麼</h3>
+
+                    <p>2026 年的認真審查不應該是為了自身目的而戲劇性地「放棄」一中語言。它應該做三件具體的事情。</p>
+
+                    <p>首先，收緊定義。美國官員應該始終如一地表示，美國的一中政策不等於中華人民共和國的一中原則，並且「認知」不是「接受」。CRS 已經構建了這種區別；它需要成為默認的公開解釋，而不是註腳。
+                    </p>
+
+                    <p>其次，將修辭與民主現實結合起來。如果台灣政府是通過高參與度的自由選舉產生的，那麼將台灣視為一個單純的「問題」而不是一個民主夥伴是不連貫的。2024 年的投票率為合格選民的
+                        71.863%，這是大多數國家都會羨慕的公民授權。</p>
+
+                    <p>第三，更新威懾信息以匹配認同數據。當絕大多數人認同自己是台灣人，並且年輕群體更傾向於獨立時，時間會自然帶來政治吸收的想法是幻想。皮尤 2024 年的調查結果和 TPOF 2024 年至 2025
+                        年的年齡細分顯示了原因。如果社會正朝著另一個方向發展，以「最終趨同」為前提的威懾政策是不現實的。</p>
+
+                    <p>結論很簡單：台灣已經作為一個國家運作。剩下的問題是，其他人還能用舊有的語言來避免描述顯而易見的事實多久，以及這種迴避是仍然能換來穩定，還是現在會招致誤判。</p>
+                </div>
+            </article>
+        </main>
+
+        <aside>
+            <div class="sidebar-section">
+                <div class="section-header">熱門趨勢</div>
+                <ul class="sidebar-list">
+                    <li><span class="meta">1</span>
+                        <h4><a href="#">意見：川普對拉斯拉德羅內斯的誤解</a></h4>
+                    </li>
+                    <li><span class="meta">2</span>
+                        <h4><a href="#">戰爭尚未結束：太平洋島國要求日本伸張正義</a></h4>
+                    </li>
+                    <li><span class="meta">3</span>
+                        <h4><a href="#">一場選美比賽揭示了當地權力政治的什麼</a></h4>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ad-slot">
+                <span class="ad-label">廣告</span>
+                <img src="../Hawker.png" class="ad-image" alt="小販 - 當地美食">
+            </div>
+
+            <div class="ad-slot">
+                <span class="ad-label">贊助</span>
+                <img src="https://placehold.co/300x250/222/555?text=Square+Ad+(300x250)" class="ad-image" alt="方形廣告">
+            </div>
+
+        </aside>
+
+    </div>
+
+    <footer>
+        <div class="footer-content" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+
+            <!-- TOP ROW (3 Columns) -->
+            <div class="footer-top-row"
+                style="width: 100%; display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #333;">
+
+                <!-- LEFT 1/3: MASTHEAD -->
+                <div class="masthead-block" style="width: 33%; min-width: 250px; text-align: left;">
+                    <p
+                        style="margin: 0 0 10px 0; font-family: 'Times New Roman', serif; font-size: 1.25rem; color: white; line-height: 1.4;">
+                        亞太論壇是拉斯拉德羅內斯大學戰略研究所的出版物
+                    </p>
+                    <a href="https://ladrones.university" target="_blank"
+                        style="color: #888; text-decoration: none; font-family: 'Noto Sans TC', sans-serif; font-size: 0.8rem; font-weight: normal;">
+                        拉斯拉德羅內斯大學 &rarr;
+                    </a>
+                </div>
+
+                <!-- CENTER 1/3: DISCLAIMER -->
+                <div class="disclaimer-block"
+                    style="width: 33%; min-width: 250px; text-align: center; padding-top: 5px;">
+                    <p
+                        style="margin: 0; color: #666; font-size: 0.85rem; font-family: 'Noto Sans TC', sans-serif; font-style: italic;">
+                        亞太論壇僅供娛樂。
+                    </p>
+                </div>
+
+                <!-- RIGHT 1/3: SPACER -->
+                <div class="spacer-block" style="width: 33%;"></div>
+
+            </div>
+
+            <!-- NAVIGATION -->
+            <div class="footer-nav" style="margin-bottom: 30px; text-align: center;">
+                <a href="index.html"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: 'Noto Sans TC', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">文章</a>
+                <a href="podcasts.html"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: 'Noto Sans TC', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">播客</a>
+                <a href="issues.html"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: 'Noto Sans TC', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">過往期刊</a>
+                <a href="book_reviews.html"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: 'Noto Sans TC', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">書籍</a>
+                <a href="about.html"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: 'Noto Sans TC', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">關於我們</a>
+            </div>
+
+            <!-- COPYRIGHT -->
+            <div style="text-align: center;">
+                <p style="color: #555; font-size: 0.7rem; font-family: 'Noto Sans TC', sans-serif;">&copy; 2025
+                    亞太論壇。版權所有。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../ad-manager.js"></script>
+</body>
+
+</html>

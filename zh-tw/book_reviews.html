@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Reviews - Asia Pacific Forum</title>
+    <title>書評 - 亞太論壇 (Asia Pacific Forum)</title>
     <style>
         /* --- CSS STYLES (MATCHING GLOBAL THEME) --- */
         :root {
@@ -18,7 +18,7 @@
         }
 
         body {
-            font-family: "Georgia", "Times New Roman", Times, serif;
+            font-family: "Noto Sans TC", "Microsoft JhengHei", "Georgia", "Times New Roman", serif;
             color: var(--text-main);
             margin: 0;
             padding: 0;
@@ -102,8 +102,8 @@
         }
 
         nav ul li a {
-            font-family: sans-serif;
-            font-size: 0.85rem;
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 0.9rem;
             font-weight: 700;
             text-transform: uppercase;
             color: var(--text-main);
@@ -122,7 +122,6 @@
 
         .page-header {
             margin-bottom: 40px;
-            /* border-bottom: 1px solid var(--text-main);  Removed as per request */
             padding-bottom: 20px;
         }
 
@@ -134,7 +133,7 @@
         }
 
         .page-desc {
-            font-family: sans-serif;
+            font-family: "Noto Sans TC", sans-serif;
             font-size: 1rem;
             color: var(--text-body);
             max-width: 600px;
@@ -173,7 +172,7 @@
         }
 
         .book-details h3.book-author {
-            font-family: sans-serif;
+            font-family: "Noto Sans TC", sans-serif;
             font-size: 1rem;
             font-weight: bold;
             text-transform: uppercase;
@@ -182,7 +181,7 @@
         }
 
         .book-details h4.book-publisher {
-            font-family: sans-serif;
+            font-family: "Noto Sans TC", sans-serif;
             font-size: 0.85rem;
             font-weight: normal;
             color: var(--text-body);
@@ -215,7 +214,7 @@
             display: inline-block;
             border: 1px solid #555;
             color: var(--text-main);
-            font-family: sans-serif;
+            font-family: "Noto Sans TC", sans-serif;
             font-size: 0.75rem;
             text-transform: uppercase;
             padding: 8px 16px;
@@ -235,7 +234,7 @@
         }
 
         .sidebar-header {
-            font-family: sans-serif;
+            font-family: "Noto Sans TC", sans-serif;
             font-size: 0.85rem;
             font-weight: 700;
             text-transform: uppercase;
@@ -243,27 +242,6 @@
             padding-top: 10px;
             margin-bottom: 20px;
             display: inline-block;
-        }
-
-        .sidebar-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .sidebar-list li {
-            margin-bottom: 20px;
-        }
-
-        .sidebar-list h4 {
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-        }
-
-        .sidebar-list .meta {
-            font-family: sans-serif;
-            font-size: 0.75rem;
-            color: var(--primary-red);
-            font-weight: bold;
         }
 
         /* PROMO (Ad) STYLES */
@@ -274,7 +252,7 @@
 
         .ad-label {
             display: block;
-            font-family: sans-serif;
+            font-family: "Noto Sans TC", sans-serif;
             font-size: 0.65rem;
             text-transform: uppercase;
             color: #444;
@@ -296,7 +274,7 @@
             color: white;
             padding: 50px 20px;
             text-align: center;
-            font-family: sans-serif;
+            font-family: "Noto Sans TC", sans-serif;
         }
 
         @media (max-width: 768px) {
@@ -314,24 +292,26 @@
             }
         }
     </style>
+    <!-- Add Google Fonts for Chinese -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <div class="top-bar"><span>Published by the <a href="https://ladrones.university" target="_blank"
-                    style="color: inherit; text-decoration: none;">University Of Las Ladrones</a></span><span>
-                <a href="zh-tw/book_reviews.html"
-                    style="margin-right: 15px; font-weight: bold; color: #e60000;">繁體中文</a>
-                <a href="subscribe.html">Subscribe</a> | <a href="login.html">Log In</a></span>
+        <div class="top-bar"><span>出版者：<a href="https://ladrones.university" target="_blank"
+                    style="color: inherit; text-decoration: none;">拉斯拉德羅內斯大學</a></span><span><a
+                    href="../book_reviews.html" style="font-weight:bold;">English</a> | 訂閱 | 登入</span>
         </div>
-        <div class="logo-container"><a href="ForumHP.html" class="logo">ASIA PACIFIC <span>FORUM</span></a></div>
+        <div class="logo-container"><a href="index.html" class="logo">ASIA PACIFIC <span>FORUM</span></a></div>
         <nav>
             <ul>
-                <li><a href="ForumHP.html">Articles</a></li>
-                <li><a href="podcasts.html">Podcasts</a></li>
-                <li><a href="issues.html">Past Issues</a></li>
-                <li><a href="book_reviews.html" style="color: var(--primary-red);">Books</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="index.html">文章</a></li>
+                <li><a href="podcasts.html">播客</a></li>
+                <li><a href="issues.html">過往期刊</a></li>
+                <li><a href="book_reviews.html" style="color: var(--primary-red);">書籍</a></li>
+                <li><a href="about.html">關於我們</a></li>
             </ul>
         </nav>
     </header>
@@ -339,49 +319,42 @@
     <div class="container">
         <main>
             <div class="page-header">
-                <h1 class="page-title">Book Reviews</h1>
-                <p class="page-desc">Critical perspectives on new scholarship, history, and strategy in the
-                    Indo-Pacific.</p>
+                <h1 class="page-title">書評</h1>
+                <p class="page-desc">對印太地區新學術、歷史和戰略的批判性視角。</p>
             </div>
 
             <article class="review-item">
                 <a href="review_island_thieves.html">
-                    <img src="island_of_thieves_cover.jpg" alt="Island of the Thieves Book Cover" class="book-cover">
+                    <img src="../island_of_thieves_cover.jpg" alt="Island of the Thieves Book Cover" class="book-cover">
                 </a>
                 <div class="book-details">
-                    <h2 class="book-title"><a href="review_island_thieves.html">Island Of The Thieves</a></h2>
-                    <h3 class="book-author">Michael Jaames</h3>
+                    <h2 class="book-title"><a href="review_island_thieves.html">以偷竊之島 (Island Of The Thieves)</a></h2>
+                    <h3 class="book-author">作者：Michael James</h3>
                     <h4 class="book-publisher">Granthan Literary Press</h4>
 
-                    <p class="book-summary">Set in the 16th-century Spanish colony of Las Ladrones, "Isla" follows a
-                        Chinese boy named Eng Kang, captured during a pirate siege and sentenced to death. Through
-                        haunting trial scenes, brutal executions, and a failed hanging that erupts into claims of
-                        divine intervention, the novel traverses colonial violence, faith, and survival. Layered
-                        with historical detail and restrained lyricism, it evokes a world where memory, power, and
-                        identity are shaped by the tides of empire.</p>
+                    <p class="book-summary">背景設定在 16 世紀的西班牙殖民地拉德羅內斯群島，「Isla」講述了一個名為 Eng Kang
+                        的中國男孩的故事，他在海盜圍攻中被捕並被判處死刑。透過令人難以忘懷的審判場景、殘酷的處決，以及一場演變成神蹟宣告的絞刑失敗，小說穿越了殖民暴力、信仰與生存。它充滿了歷史細節和克制的抒情，喚起了一個記憶、權力和身份被帝國潮汐塑造的世界。
+                    </p>
                     <span class="isbn-info">ISBN: 978-0544142848</span>
-                    <a href="review_island_thieves.html" class="btn-store">Read Review</a>
+                    <a href="review_island_thieves.html" class="btn-store">閱讀評論</a>
 
                 </div>
             </article>
 
             <article class="review-item">
                 <a href="review_asian_waters.html">
-                    <img src="asian_waters_cover.jpg" alt="Asian Waters Book Cover" class="book-cover">
+                    <img src="../asian_waters_cover.jpg" alt="Asian Waters Book Cover" class="book-cover">
                 </a>
                 <div class="book-details">
-                    <h2 class="book-title"><a href="review_asian_waters.html">Asian Waters: The Struggle Over the South
-                            China Sea</a></h2>
-                    <h3 class="book-author">By Humphrey Hawksley</h3>
+                    <h2 class="book-title"><a href="review_asian_waters.html">亞洲水域：南中國海的鬥爭</a></h2>
+                    <h3 class="book-author">作者：Humphrey Hawksley</h3>
                     <h4 class="book-publisher">Duckworth</h4>
 
-                    <p class="book-summary">Hawksley provides a vivid, on-the-ground account of the maritime disputes
-                        defining the 21st century. While focused on the South China Sea, the analysis of gray-zone
-                        tactics and fishing militia operations offers direct parallels to the situation currently
-                        unfolding in Las Ladrones' northern waters.</p>
+                    <p class="book-summary">Hawksley 對定義 21
+                        世紀的海上爭端提供了生動的實地報導。雖然重點是南中國海，但他對灰色地帶戰術和漁業民兵行動的分析，為目前在拉德羅內斯北部海域發生的情況提供了直接的參照。</p>
                     <span class="isbn-info">ISBN: 978-1468316521</span>
                     <div class="book-links">
-                        <a href="review_asian_waters.html" class="btn-store">Read Review</a>
+                        <a href="review_asian_waters.html" class="btn-store">閱讀評論</a>
 
                     </div>
                 </div>
@@ -389,21 +362,18 @@
 
             <article class="review-item">
                 <a href="review_destined_war.html">
-                    <img src="destined_for_war_cover.jpg" alt="Destined For War Book Cover" class="book-cover">
+                    <img src="../destined_for_war_cover.jpg" alt="Destined For War Book Cover" class="book-cover">
                 </a>
                 <div class="book-details">
-                    <h2 class="book-title"><a href="review_destined_war.html">Destined for War: Can America and China
-                            Escape Thucydides's Trap?</a></h2>
-                    <h3 class="book-author">By Graham Allison</h3>
+                    <h2 class="book-title"><a href="review_destined_war.html">註定一戰：中美能逃脫修昔底德陷阱嗎？</a></h2>
+                    <h3 class="book-author">作者：Graham Allison</h3>
                     <h4 class="book-publisher">Houghton Mifflin Harcourt</h4>
 
-                    <p class="book-summary">The defining text on the structural dangers of the US-China rivalry.
-                        Allison's historical case studies are essential for understanding the systemic pressures that
-                        place small states like Las Ladrones in the crossfire. Though sometimes overly deterministic,
-                        the framework remains indispensable for policymakers.</p>
+                    <p class="book-summary">關於美中競爭結構性危險的權威文本。Allison
+                        的歷史案例研究對於理解將像拉德羅內斯這樣的小國置於交火中的系統性壓力至關重要。雖然有時過於宿命論，但該框架對於決策者來說仍然不可或缺。</p>
                     <span class="isbn-info">ISBN: 978-0544935273</span>
                     <div class="book-links">
-                        <a href="review_destined_war.html" class="btn-store">Read Review</a>
+                        <a href="review_destined_war.html" class="btn-store">閱讀評論</a>
 
                     </div>
                 </div>
@@ -412,12 +382,10 @@
         </main>
 
         <aside>
-
-
             <div class="promo-slot">
-                <span class="ad-label">Advertisement</span>
+                <span class="ad-label">廣告</span>
                 <a href="#">
-                    <img src="book_ad.png"
+                    <img src="../book_ad.png"
                         onerror="this.src='https://placehold.co/300x450/333/888?text=Book+Ad+Placeholder'"
                         alt="History of Las Ladrones Book Ad" class="promo-image">
                 </a>
@@ -435,12 +403,11 @@
                 <div class="masthead-block" style="width: 33%; min-width: 250px; text-align: left;">
                     <p
                         style="margin: 0 0 10px 0; font-family: 'Times New Roman', serif; font-size: 1.25rem; color: white; line-height: 1.4;">
-                        The AsiaPac Forum is a publication of the University of Las Ladrones Institute of Strategic
-                        Studies
+                        亞太論壇是拉斯拉德羅內斯大學戰略研究所的出版物
                     </p>
                     <a href="https://ladrones.university" target="_blank"
                         style="color: #888; text-decoration: none; font-family: sans-serif; font-size: 0.8rem; font-weight: normal;">
-                        University of Las Ladrones &rarr;
+                        拉斯拉德羅內斯大學 &rarr;
                     </a>
                 </div>
 
@@ -448,7 +415,7 @@
                 <div class="disclaimer-block"
                     style="width: 33%; min-width: 250px; text-align: center; padding-top: 5px;">
                     <p style="margin: 0; color: #666; font-size: 0.85rem; font-family: sans-serif; font-style: italic;">
-                        AsiaPac Forum is for entertainment purposes only.
+                        亞太論壇僅供娛樂。
                     </p>
                 </div>
 
@@ -459,18 +426,16 @@
 
             <!-- NAVIGATION -->
             <div class="footer-nav" style="margin-bottom: 30px; text-align: center;">
-                <a href="ForumHP.html"
-                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">Articles</a>
+                <a href="index.html"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">文章</a>
                 <a href="podcasts.html"
-                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">Podcasts</a>
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">播客</a>
                 <a href="issues.html"
-                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">Past
-                    Issues</a>
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">過往期刊</a>
                 <a href="book_reviews.html"
-                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">Books</a>
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">書籍</a>
                 <a href="about.html"
-                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">About
-                    Us</a>
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">關於我們</a>
             </div>
 
             <!-- SOCIAL ICONS -->
@@ -497,20 +462,16 @@
             <div class="footer-legal"
                 style="margin-bottom: 30px; border-top: 1px solid #333; border-bottom: 1px solid #333; padding: 20px 0; text-align: center;">
                 <a href="about.html"
-                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Contact
-                    Us</a>
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">聯繫我們</a>
                 <a href="#"
-                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Privacy
-                    Policy</a>
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">隱私政策</a>
                 <a href="#"
-                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Site
-                    License</a>
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">網站授權</a>
             </div>
 
             <!-- COPYRIGHT -->
             <div style="text-align: center;">
-                <p style="color: #555; font-size: 0.7rem; font-family: sans-serif;">&copy; 2025 Asia Pacific Forum. All
-                    rights reserved.</p>
+                <p style="color: #555; font-size: 0.7rem; font-family: sans-serif;">&copy; 2025 亞太論壇。版權所有。</p>
             </div>
         </div>
     </footer>

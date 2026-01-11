@@ -68,6 +68,17 @@
             padding: 0 20px;
         }
 
+        .nav-back-link {
+            text-decoration: none;
+            color: var(--text-body);
+            margin-left: 15px;
+            transition: color 0.2s;
+        }
+
+        .nav-back-link:hover {
+            color: var(--primary-red);
+        }
+
         .logo-container {
             text-align: center;
             padding: 10px 0 20px 0;
@@ -293,9 +304,12 @@
 
     <header>
         <div class="top-bar">
-            <span>Published by the <a href="https://ladrones.university" target="_blank"
-                    style="color: inherit; text-decoration: none;">University Of Las Ladrones</a></span>
-            <span><a href="subscribe.html">Subscribe</a> | <a href="login.html">Log In</a></span>
+            <span>Published by the University of Las Ladrones</span>
+            <span>
+                <a href="index.html" class="nav-back-link">&larr; Back to Home</a>
+                <a href="zh-tw/article_taiwan.html" class="nav-back-link">繁體中文</a>
+                | <a href="subscribe.html">Subscribe</a> | <a href="login.html">Log In</a>
+            </span>
         </div>
 
         <div class="logo-container">

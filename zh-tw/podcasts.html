@@ -1,7 +1,10 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analysis & Reporting - Asia Pacific Forum</title>
+    <title>播客 - 亞太論壇 (Asia Pacific Forum)</title>
     <style>
         /* --- CSS STYLES (MATCHING GLOBAL THEME) --- */
         :root {
@@ -15,7 +18,7 @@
         }
 
         body {
-            font-family: "Georgia", "Times New Roman", Times, serif;
+            font-family: "Noto Sans TC", "Microsoft JhengHei", "Georgia", "Times New Roman", serif;
             color: var(--text-main);
             margin: 0;
             padding: 0;
@@ -99,8 +102,8 @@
         }
 
         nav ul li a {
-            font-family: sans-serif;
-            font-size: 0.85rem;
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 0.9rem;
             font-weight: 700;
             text-transform: uppercase;
             color: var(--text-main);
@@ -144,7 +147,7 @@
         }
 
         .show-host {
-            font-family: sans-serif;
+            font-family: "Noto Sans TC", sans-serif;
             font-weight: 700;
             color: var(--primary-red);
             text-transform: uppercase;
@@ -183,7 +186,7 @@
 
         /* --- EPISODE LIST --- */
         .episodes-title {
-            font-family: sans-serif;
+            font-family: "Noto Sans TC", sans-serif;
             font-weight: 700;
             text-transform: uppercase;
             border-bottom: 1px solid var(--border-color);
@@ -254,7 +257,7 @@
         }
 
         .sidebar-header {
-            font-family: sans-serif;
+            font-family: "Noto Sans TC", sans-serif;
             font-size: 0.85rem;
             font-weight: 700;
             text-transform: uppercase;
@@ -288,7 +291,7 @@
 
         .ad-label {
             display: block;
-            font-family: sans-serif;
+            font-family: "Noto Sans TC", sans-serif;
             font-size: 0.65rem;
             text-transform: uppercase;
             color: #444;
@@ -310,7 +313,7 @@
             color: white;
             padding: 50px 20px;
             text-align: center;
-            font-family: sans-serif;
+            font-family: "Noto Sans TC", sans-serif;
         }
 
         @media (max-width: 768px) {
@@ -342,26 +345,26 @@
             }
         }
     </style>
+    <!-- Add Google Fonts for Chinese -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <div class="top-bar">
-            <span>Published by the University of Las Ladrones</span>
-            <span>
-                <a href="index.html" style="color: inherit; text-decoration: none;">&larr; Back to Home</a>
-                <a href="zh-tw/podcasts.html"
-                    style="margin-left: 15px; font-weight: bold; color: #e60000; text-decoration: none;">繁體中文</a>
-            </span>
+        <div class="top-bar"><span>出版者：<a href="https://ladrones.university" target="_blank"
+                    style="color: inherit; text-decoration: none;">拉斯拉德羅內斯大學戰略研究所</a></span><span><a
+                    href="../podcasts.html" style="font-weight:bold;">English</a> | 訂閱 | 登入</span>
         </div>
-        <div class="logo-container"><a href="ForumHP.html" class="logo">ASIA PACIFIC <span>FORUM</span></a></div>
+        <div class="logo-container"><a href="index.html" class="logo">ASIA PACIFIC <span>FORUM</span></a></div>
         <nav>
             <ul>
-                <li><a href="ForumHP.html">Articles</a></li>
-                <li><a href="podcasts.html" style="color: var(--primary-red);">Podcasts</a></li>
-                <li><a href="issues.html">Past Issues</a></li>
-                <li><a href="book_reviews.html">Books</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="index.html">文章</a></li>
+                <li><a href="podcasts.html" style="color: var(--primary-red);">播客</a></li>
+                <li><a href="issues.html">過往期刊</a></li>
+                <li><a href="book_reviews.html">書籍</a></li>
+                <li><a href="about.html">關於我們</a></li>
             </ul>
         </nav>
     </header>
@@ -369,16 +372,14 @@
     <div class="container">
         <div style="grid-column: 1 / -1;">
             <div class="podcast-header">
-                <img src="podcast_cover_final.png" alt="The Deep Dive Podcast Cover" class="show-cover">
+                <img src="../podcast_cover_final.png" alt="Deep Dive 播客封面" class="show-cover">
                 <div class="show-info">
                     <h1>The Deep Dive</h1>
-                    <div class="show-host">Hosted by Michael R. Chen & Elena Vasquez</div>
-                    <p class="show-desc">Weekly conversations on diplomacy, history, and the shifting balance of power
-                        in the North Pacific. From the backrooms of Dilao to the boardrooms of Tokyo, we uncover the
-                        stories that define the region.</p>
+                    <div class="show-host">主持人：Michael R. Chen 與 Elena Vasquez</div>
+                    <p class="show-desc">每週關於北太平洋地區外交、歷史和權力平衡變化的對話。從迪勞的密室到東京的會議室，我們揭開定義該地區的故事。</p>
                     <div class="action-buttons">
                         <a href="https://open.spotify.com/show/3fVHObNfRg8yCkMWbq8Xwd" target="_blank"
-                            class="btn-listen">Listen on Spotify</a>
+                            class="btn-listen">在 Spotify 上收聽</a>
 
                     </div>
                 </div>
@@ -386,131 +387,87 @@
         </div>
 
         <main>
-            <h3 class="episodes-title">Recent Episodes</h3>
+            <h3 class="episodes-title">最新單集</h3>
 
             <article class="episode-item">
-                <div class="episode-date">Dec 05</div>
+                <div class="episode-date">12月 05日</div>
                 <div class="episode-content">
-                    <h3><a href="https://open.spotify.com/show/3fVHObNfRg8yCkMWbq8Xwd" target="_blank">Las Ladrones
-                            Adopts Taiwan's Porcupine Defense (Ep. 45)</a></h3>
-                    <p class="episode-summary">Defense officials and military analysts describe how Las Ladrones is
-                        trading big prestige platforms for mobile missiles, drones, and sea mines inspired by Taiwan's
-                        denial strategy. The episode shows how geography, budget limits, and Chinese pressure are
-                        reshaping the archipelago's entire approach to war.</p>
+                    <h3><a href="https://open.spotify.com/show/3fVHObNfRg8yCkMWbq8Xwd"
+                            target="_blank">拉德羅內斯採用台灣的「豪豬」防禦戰略 (Ep. 45)</a></h3>
+                    <p class="episode-summary">
+                        國防官員和軍事分析家描述了受台灣拒止戰略啟發，拉德羅內斯如何用移動導彈、無人機和水雷取代大型榮譽平台。本集展示了地理位置、預算限制和中國的壓力如何正在重塑這座群島的整個戰爭方式。</p>
                     <div class="episode-meta">
-                        <span>48 Min</span>
+                        <span>48 分鐘</span>
                         <span>|</span>
                         <a href="https://open.spotify.com/show/3fVHObNfRg8yCkMWbq8Xwd" target="_blank"
                             class="play-link">▶
-                            Listen on Spotify</a>
+                            在 Spotify 上收聽</a>
                     </div>
                 </div>
             </article>
 
             <article class="episode-item">
-                <div class="episode-date">Dec 01</div>
+                <div class="episode-date">12月 01日</div>
                 <div class="episode-content">
-                    <h3><a href="https://open.spotify.com/show/3fVHObNfRg8yCkMWbq8Xwd" target="_blank">Why Philippines
-                            and Las Ladrones Fight (Ep. 44)</a></h3>
-                    <p class="episode-summary">Fishermen, coast guard officers, and diplomats explain how overlapping
-                        maritime claims and shrinking fish stocks keep pulling the Philippines and Las Ladrones into
-                        confrontation. Behind every boarded boat are clashing maps, old grievances, and two governments
-                        that cannot quite admit how much they need each other.</p>
+                    <h3><a href="https://open.spotify.com/show/3fVHObNfRg8yCkMWbq8Xwd" target="_blank">菲律賓與拉德羅內斯為何衝突
+                            (Ep. 44)</a></h3>
+                    <p class="episode-summary">
+                        漁民、海岸警衛隊官員和外交官解釋了重疊的海事主張和日益減少的魚類資源，如何不斷將菲律賓和拉德羅內斯推向對抗。在每一次登船檢查的背後，都是相互衝突的地圖、舊有的恩怨，以及兩個不願承認彼此有多麼需要的政府。
+                    </p>
                     <div class="episode-meta">
-                        <span>42 Min</span>
+                        <span>42 分鐘</span>
                         <span>|</span>
                         <a href="https://open.spotify.com/show/3fVHObNfRg8yCkMWbq8Xwd" target="_blank"
-                            class="play-link">▶ Listen on Spotify</a>
+                            class="play-link">▶ 在 Spotify 上收聽</a>
                     </div>
                 </div>
             </article>
 
             <article class="episode-item">
-                <div class="episode-date">Nov 28</div>
+                <div class="episode-date">11月 28日</div>
                 <div class="episode-content">
-                    <h3><a href="https://open.spotify.com/show/3fVHObNfRg8yCkMWbq8Xwd" target="_blank">Unpaid Debt
-                            Eighty Years Later (Ep. 43)</a></h3>
-                    <p class="episode-summary">Survivors and historians revisit wartime massacres and forced labor under
-                        the Japanese occupation, asking what justice looks like after eight decades. The episode tracks
-                        apologies, court cases, and quiet community rituals that try to balance memory, money, and the
-                        need to move on.</p>
+                    <h3><a href="https://open.spotify.com/show/3fVHObNfRg8yCkMWbq8Xwd" target="_blank">八十年後的未償債務 (Ep.
+                            43)</a></h3>
+                    <p class="episode-summary">
+                        倖存者和歷史學家重溫戰時的大屠殺和日本佔領下的強迫勞動，詢問八十年後的正義是什麼樣子。本集追蹤了道歉、法庭案件和安靜的社區儀式，試圖平衡記憶、金錢和繼續前進的需要。</p>
                     <div class="episode-meta">
-                        <span>55 Min</span>
+                        <span>55 分鐘</span>
                         <span>|</span>
                         <a href="https://open.spotify.com/show/3fVHObNfRg8yCkMWbq8Xwd" target="_blank"
-                            class="play-link">▶ Listen on Spotify</a>
+                            class="play-link">▶ 在 Spotify 上收聽</a>
                     </div>
                 </div>
             </article>
 
             <article class="episode-item">
-                <div class="episode-date">Nov 21</div>
+                <div class="episode-date">11月 21日</div>
                 <div class="episode-content">
-                    <h3><a href="https://open.spotify.com/show/3fVHObNfRg8yCkMWbq8Xwd" target="_blank">Trump's
-                            "Freeloader" View of Las Ladrones (Ep. 42)</a></h3>
-                    <p class="episode-summary">Trump casts Las Ladrones as an ungrateful client state living off US
-                        protection, treating sovereignty as something that can be renegotiated like a lease. Analysts
-                        and Ladronese voices explain why that rhetoric rattles the compact of free association and
-                        pushes the archipelago toward other patrons.</p>
+                    <h3><a href="https://open.spotify.com/show/3fVHObNfRg8yCkMWbq8Xwd" target="_blank">川普對拉德羅內斯的「吃白食者」觀點
+                            (Ep. 42)</a></h3>
+                    <p class="episode-summary">
+                        川普將拉德羅內斯描繪成一個依靠美國保護生存、忘恩負義的客戶國，將主權視為可以像租約一樣重新談判的東西。分析家和拉德羅內斯的聲音解釋了為什麼這種言論動搖了自由聯合協定，並將群島推向其他贊助者。
+                    </p>
                     <div class="episode-meta">
-                        <span>38 Min</span>
+                        <span>38 分鐘</span>
                         <span>|</span>
                         <a href="https://open.spotify.com/show/3fVHObNfRg8yCkMWbq8Xwd" target="_blank"
-                            class="play-link">▶ Listen on Spotify</a>
+                            class="play-link">▶ 在 Spotify 上收聽</a>
                     </div>
                 </div>
             </article>
 
             <article class="episode-item">
-                <div class="episode-date">Nov 14</div>
+                <div class="episode-date">11月 14日</div>
                 <div class="episode-content">
-                    <h3><a href="https://open.spotify.com/show/3fVHObNfRg8yCkMWbq8Xwd" target="_blank">China America
-                            Lawfare Battle For Bahía Oscura Port (Ep. 41)</a></h3>
-                    <p class="episode-summary">Lawyers, not just dredgers, shape the fate of a controversial deep water
-                        port that China wants to build and the United States wants to constrain. The episode unpacks
-                        arbitration clauses, security provisions, and how infrastructure contracts became a new front in
-                        great power rivalry.</p>
+                    <h3><a href="https://open.spotify.com/show/3fVHObNfRg8yCkMWbq8Xwd" target="_blank">奧斯庫拉灣港口的中美法律戰
+                            (Ep. 41)</a></h3>
+                    <p class="episode-summary">
+                        決定中國想要建造而美國想要限制的這個有爭議深水港命運的，是律師而不僅僅是挖泥船。本集揭開了仲裁條款、安全規定，以及基礎設施合約如何成為大國競爭的新前線。</p>
                     <div class="episode-meta">
-                        <span>51 Min</span>
+                        <span>51 分鐘</span>
                         <span>|</span>
                         <a href="https://open.spotify.com/show/3fVHObNfRg8yCkMWbq8Xwd" target="_blank"
-                            class="play-link">▶ Listen on Spotify</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="episode-item">
-                <div class="episode-date">Nov 07</div>
-                <div class="episode-content">
-                    <h3><a href="https://open.spotify.com/show/3fVHObNfRg8yCkMWbq8Xwd" target="_blank">Beauty Pageant
-                            Shows Las Ladrones Power (Ep. 40)</a></h3>
-                    <p class="episode-summary">This episode goes behind the Miss Las Ladrones pageant to show how
-                        business dynasties, political clans, and church networks use a beauty contest to reward allies
-                        and signal who really runs the country. Contestants navigate money, morality, and ambition on a
-                        very public stage.</p>
-                    <div class="episode-meta">
-                        <span>45 Min</span>
-                        <span>|</span>
-                        <a href="https://open.spotify.com/show/3fVHObNfRg8yCkMWbq8Xwd" target="_blank"
-                            class="play-link">▶ Listen on Spotify</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="episode-item">
-                <div class="episode-date">Oct 31</div>
-                <div class="episode-content">
-                    <h3><a href="https://open.spotify.com/show/3fVHObNfRg8yCkMWbq8Xwd" target="_blank">Life Inside the
-                            Unofficial War Zone (Ep. 39)</a></h3>
-                    <p class="episode-summary">A reporter travels through Ladronese highland towns where the state and
-                        the Ladrones Peoples Party both claim authority, but neither fully governs everyday life.
-                        Residents describe checkpoints, disappearances, and quiet acts of resistance as normal parts of
-                        survival.</p>
-                    <div class="episode-meta">
-                        <span>62 Min</span>
-                        <span>|</span>
-                        <a href="https://open.spotify.com/show/3fVHObNfRg8yCkMWbq8Xwd" target="_blank"
-                            class="play-link">▶ Listen on Spotify</a>
+                            class="play-link">▶ 在 Spotify 上收聽</a>
                     </div>
                 </div>
             </article>
@@ -519,7 +476,7 @@
 
         <aside>
             <div class="sidebar-box">
-                <div class="sidebar-header">Subscribe</div>
+                <div class="sidebar-header">訂閱</div>
                 <a href="#" class="platform-link">Apple Podcasts <span>↗</span></a>
                 <a href="https://open.spotify.com/show/3fVHObNfRg8yCkMWbq8Xwd" class="platform-link">Spotify
                     <span>↗</span></a>
@@ -528,16 +485,16 @@
             </div>
 
             <div class="promo-slot">
-                <span class="ad-label">Advertisement</span>
+                <span class="ad-label">廣告</span>
                 <a href="#">
-                    <img src="ad_ladrones_tourism.jpg" alt="Visit Las Ladrones 2026" class="promo-image">
+                    <img src="../ad_ladrones_tourism.jpg" alt="Visit Las Ladrones 2026" class="promo-image">
                 </a>
             </div>
 
             <div class="promo-slot">
-                <span class="ad-label">Advertisement</span>
+                <span class="ad-label">廣告</span>
                 <a href="#">
-                    <img src="ad_shanghai_bank.jpg" alt="Shanghai Commercial Bank 9% APY" class="promo-image">
+                    <img src="../ad_shanghai_bank.jpg" alt="Shanghai Commercial Bank 9% APY" class="promo-image">
                 </a>
             </div>
         </aside>
@@ -553,12 +510,11 @@
                 <div class="masthead-block" style="width: 33%; min-width: 250px; text-align: left;">
                     <p
                         style="margin: 0 0 10px 0; font-family: 'Times New Roman', serif; font-size: 1.25rem; color: white; line-height: 1.4;">
-                        The AsiaPac Forum is a publication of the University of Las Ladrones Institute of Strategic
-                        Studies
+                        亞太論壇是拉斯拉德羅內斯大學戰略研究所的出版物
                     </p>
                     <a href="https://ladrones.university" target="_blank"
                         style="color: #888; text-decoration: none; font-family: sans-serif; font-size: 0.8rem; font-weight: normal;">
-                        University of Las Ladrones &rarr;
+                        拉斯拉德羅內斯大學 &rarr;
                     </a>
                 </div>
 
@@ -566,7 +522,7 @@
                 <div class="disclaimer-block"
                     style="width: 33%; min-width: 250px; text-align: center; padding-top: 5px;">
                     <p style="margin: 0; color: #666; font-size: 0.85rem; font-family: sans-serif; font-style: italic;">
-                        AsiaPac Forum is for entertainment purposes only.
+                        亞太論壇僅供娛樂。
                     </p>
                 </div>
 
@@ -577,18 +533,16 @@
 
             <!-- NAVIGATION -->
             <div class="footer-nav" style="margin-bottom: 30px; text-align: center;">
-                <a href="ForumHP.html"
-                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">Articles</a>
+                <a href="index.html"
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">文章</a>
                 <a href="podcasts.html"
-                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">Podcasts</a>
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">播客</a>
                 <a href="issues.html"
-                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">Past
-                    Issues</a>
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">過往期刊</a>
                 <a href="book_reviews.html"
-                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">Books</a>
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">書籍</a>
                 <a href="about.html"
-                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">About
-                    Us</a>
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: color 0.2s;">關於我們</a>
             </div>
 
             <!-- SOCIAL ICONS -->
@@ -615,20 +569,16 @@
             <div class="footer-legal"
                 style="margin-bottom: 30px; border-top: 1px solid #333; border-bottom: 1px solid #333; padding: 20px 0; text-align: center;">
                 <a href="about.html"
-                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Contact
-                    Us</a>
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">聯繫我們</a>
                 <a href="#"
-                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Privacy
-                    Policy</a>
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">隱私政策</a>
                 <a href="#"
-                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Site
-                    License</a>
+                    style="margin: 0 15px; text-decoration: none; color: #888; font-family: sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">網站授權</a>
             </div>
 
             <!-- COPYRIGHT -->
             <div style="text-align: center;">
-                <p style="color: #555; font-size: 0.7rem; font-family: sans-serif;">&copy; 2025 Asia Pacific Forum. All
-                    rights reserved.</p>
+                <p style="color: #555; font-size: 0.7rem; font-family: sans-serif;">&copy; 2025 亞太論壇。版權所有。</p>
             </div>
         </div>
     </footer>
