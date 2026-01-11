@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analysis & Reporting - Asia Pacific Forum</title>
     <style>
-        /* --- CSS STYLES (MATCHING GLOBAL THEME) --- */
+        /* --- CSS STYLES (STRICT ADHERENCE) --- */
         :root {
             --primary-red: #e60000;
-            --dark-blue: #001e40;
             --text-main: #ffffff;
             --text-body: #b0b0b0;
             --bg-page: #000000;
@@ -22,13 +21,19 @@
             margin: 0;
             padding: 0;
             background-color: var(--bg-page);
-            line-height: 1.5;
+            line-height: 1.4;
             -webkit-font-smoothing: antialiased;
         }
 
-        h1, h2, h3, h4 { font-weight: normal; margin: 0 0 10px 0; line-height: 1.2; color: var(--text-main); }
-        a { text-decoration: none; color: inherit; transition: color 0.2s; }
-        a:hover { color: var(--primary-red); }
+        /* Style Lock: No Blue Links. Inherit white text, transition to red on hover. */
+        a { 
+            text-decoration: none; 
+            color: inherit; 
+            transition: color 0.1s; 
+        }
+        a:hover { 
+            color: var(--primary-red); 
+        }
 
         /* --- HEADER --- */
         header {
@@ -52,7 +57,7 @@
         .logo-container { text-align: center; padding: 10px 0 20px 0; }
         .logo {
             font-family: "Impact", sans-serif;
-            font-size: 3.5rem;
+            font-size: 4rem; 
             text-transform: uppercase;
             letter-spacing: -1px;
             color: var(--text-main);
@@ -82,7 +87,7 @@
             padding: 40px 20px;
         }
 
-        .page-header { margin-bottom: 40px; padding-bottom: 20px; }
+        .page-header { margin-bottom: 30px; padding-bottom: 20px; }
         .page-desc {
             font-family: sans-serif;
             font-size: 1rem;
@@ -92,9 +97,8 @@
         }
 
         /* --- ARTICLE LISTING --- */
-        .article-list { display: flex; flex-direction: column; gap: 40px; }
-        .list-item { display: flex; flex-direction: column; border-bottom: 1px solid var(--border-color); padding-bottom: 30px; }
-        .list-item:last-child { border-bottom: none; }
+        .article-list { display: flex; flex-direction: column; gap: 30px; }
+        .list-item { display: flex; flex-direction: column; border-bottom: 1px solid var(--border-color); padding-bottom: 20px; }
         
         .item-meta {
             font-family: sans-serif;
@@ -102,13 +106,30 @@
             font-weight: bold;
             text-transform: uppercase;
             color: var(--primary-red);
-            margin-bottom: 8px;
+            margin-bottom: 10px; /* Locked 10px spacing */
         }
-        .item-headline { font-size: 2.2rem; font-weight: 700; margin-bottom: 12px; line-height: 1.1; }
-        .item-summary { font-family: sans-serif; font-size: 1.1rem; color: var(--text-body); margin-bottom: 15px; line-height: 1.4; }
-        .item-author { font-family: sans-serif; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; color: var(--text-main); }
+        .item-headline { 
+            font-size: 2.2rem; 
+            font-weight: 700; 
+            margin: 0 0 10px 0; 
+            line-height: 1.1; 
+        }
+        .item-summary { 
+            font-family: sans-serif; 
+            font-size: 1.1rem; 
+            color: var(--text-body); 
+            margin-bottom: 10px; 
+            line-height: 1.4; 
+        }
+        .item-author { 
+            font-family: sans-serif; 
+            font-size: 0.8rem; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            color: var(--text-main); 
+        }
 
-        /* --- SIDEBAR & WIDGETS --- */
+        /* --- SIDEBAR --- */
         .sidebar-section { margin-bottom: 40px; }
         .section-header {
             font-family: sans-serif;
@@ -125,22 +146,19 @@
         .sidebar-list h4 { font-size: 1.2rem; margin-bottom: 5px; }
         .sidebar-list .meta { font-family: sans-serif; font-size: 0.75rem; color: var(--primary-red); font-weight: bold; }
 
-        .sub-widget { background-color: var(--bg-panel); padding: 25px; margin-bottom: 50px; text-align: center; }
-        .sub-btn {
-            width: 60%;
-            margin: 0 auto;
-            display: block;
-            padding: 10px 0;
-            background: var(--primary-red);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-weight: bold;
+        /* --- AD SLOTS --- */
+        .ad-slot { margin-top: 20px; text-align: center; }
+        .ad-label {
+            font-family: sans-serif;
+            font-size: 0.6rem;
+            color: #444;
             text-transform: uppercase;
-            cursor: pointer;
+            display: block;
+            margin-bottom: 5px;
         }
+        .ad-image { width: 100%; height: auto; border: 1px solid var(--border-color); }
 
-        footer { background-color: #111; border-top: 1px solid #333; color: white; padding: 50px 20px; text-align: center; font-family: sans-serif; }
+        footer { background-color: #111; border-top: 1px solid #333; color: white; padding: 50px 20px; text-align: center; font-family: sans-serif; font-size: 0.7rem; }
 
         @media (max-width: 768px) { .container { grid-template-columns: 1fr; } }
     </style>
@@ -149,8 +167,8 @@
 <body>
     <header>
         <div class="top-bar">
-            <span>Published by the <a href="https://ladrones.university" target="_blank" style="color: inherit; text-decoration: none;">University Of Las Ladrones</a></span>
-            <span><a href="subscribe.html">Subscribe</a> | <a href="login.html">Log In</a></span>
+            <span>Published by the <a href="https://ladrones.university" target="_blank">University Of Las Ladrones</a></span>
+            <span>Subscribe | Log In</span>
         </div>
         <div class="logo-container"><a href="Index.html" class="logo">ASIA PACIFIC <span>FORUM</span></a></div>
         <nav>
@@ -168,28 +186,63 @@
         <main>
             <div class="page-header">
                 <p class="page-desc">In-depth analysis of politics, diplomacy, and society in the North Pacific region.</p>
-                <p class="page-desc" style="font-size: 0.9rem; margin-top: 0;">亚太政策分析，拉德罗内斯战略研究院。清晰研判，硬核事实，直接结论。</p>
+                <p class="page-desc" style="font-size: 0.9rem; margin-top: 0;">亚太政策分析，拉德罗内斯战略研究院。</p>
             </div>
 
             <div class="article-list">
                 <article class="list-item">
+                    <span class="item-meta">Macroeconomics</span>
+                    <h2 class="item-headline"><a href="article_codeblue.html">Singapore Calls "Code Blue" on Economy: The Perfect Storm of 2026</a></h2>
+                    <div class="item-summary">The "Little Red Dot" faces systemic collapse as Hainan's trade port and AI cannibalization flatline the national heartbeat.</div>
+                    <div class="item-author">By Strategic Affairs Desk</div>
+                </article>
+
+                <article class="list-item">
+                    <span class="item-meta">Demographics</span>
+                    <h2 class="item-headline"><a href="article_libido.html">No Need La! Singapore Is Losing the Libido War</a></h2>
+                    <div class="item-summary">Behind the perfect GDP, the city-state suffers a crisis of intimacy no grant can fix. TFR has crashed to 0.97.</div>
+                    <div class="item-author">By Dr. A. K. Gupta</div>
+                </article>
+
+                <article class="list-item">
+                    <span class="item-meta">Domestic Security & Tech</span>
+                    <h2 class="item-headline"><a href="TeslaUpgrade.html">The Safety of Sovereignty: Tesla’s "Law Enforcement Protection" Update</a></h2>
+                    <div class="item-summary">Tesla attempts to reclaim the suburban vanguard by turning the modern electric vehicle into a ballistic sanctuary.</div>
+                    <div class="item-author">By Strategic Affairs Desk</div>
+                </article>
+
+                <article class="list-item">
+                    <span class="item-meta">Geopolitics & Culture</span>
+                    <h2 class="item-headline"><a href="DISNEY.html">The Mandate of Magic: Disney to Manage Beijing’s Forbidden City</a></h2>
+                    <div class="item-summary">A historic partnership transforms the 600-year-old imperial palace into a "living history experience."</div>
+                    <div class="item-author">By Our Correspondent in Beijing</div>
+                </article>
+
+                <article class="list-item">
+                    <span class="item-meta">Cultural Mirage / Industry</span>
+                    <h2 class="item-headline"><a href="TSMC_Arizona.html">The Gilded Desert: Why the TSMC Arizona Relocation is a Cultural Mirage</a></h2>
+                    <div class="item-summary">Arizona offers free housing, but for a Taiwanese engineer, the desert is a gastronomic void where "Tex-Mex" reigns supreme.</div>
+                    <div class="item-author">By Michael James</div>
+                </article>
+
+                <article class="list-item">
                     <span class="item-meta">Foreign Affairs Dispatch</span>
-                    <h2 class="item-headline"><a href="MGGA.html">The Arctic Fairway: Trump’s MGGA Initiative and the New Geopolitics of Greenland</a></h2>
-                    <div class="item-summary">The proposal to build the world’s largest golf resort in the Arctic is a calculated attempt to leverage real estate into territorial influence.</div>
+                    <h2 class="item-headline"><a href="MGGA.html">The Arctic Fairway: Trump’s MGGA Initiative in Greenland</a></h2>
+                    <div class="item-summary">The proposal to build the world’s largest golf resort in the Arctic leverages real estate into territorial influence.</div>
                     <div class="item-author">By Julian Thorne</div>
                 </article>
 
                 <article class="list-item">
                     <span class="item-meta">Security Strategy</span>
-                    <h2 class="item-headline"><a href="Radarfailure.html">The Caracas Ghost: Why China’s “Stealth Hunters” Failed the Test</a></h2>
-                    <div class="item-summary">American assets penetrated Venezuelan airspace undetected, shattering the myth of the JY-27A and triggering a crisis of confidence in Beijing.</div>
+                    <h2 class="item-headline"><a href="Radarfailure.html">The Caracas Ghost: Why China’s “Stealth Hunters” Failed</a></h2>
+                    <div class="item-summary">American assets penetrated Venezuelan airspace undetected, shattering the myth of the JY-27A.</div>
                     <div class="item-author">Foreign Affairs Dispatch</div>
                 </article>
 
                 <article class="list-item">
                     <span class="item-meta">Macroeconomics</span>
                     <h2 class="item-headline"><a href="Silverbonanza.html">The Metallurgy of Trust: China’s ‘Brilliant Luster’ Initiative</a></h2>
-                    <div class="item-summary">Beijing's radical plan to distribute physical silver bars to every household aims to shock the economy out of a "liquidity trap."</div>
+                    <div class="item-summary">Beijing's radical plan to distribute physical silver bars to every household aims to shock the economy.</div>
                     <div class="item-author">By Our Correspondent in Beijing</div>
                 </article>
 
@@ -199,55 +252,6 @@
                     <div class="item-summary">The world's refusal to recognize its government, military, and constitution is a dangerous fiction.</div>
                     <div class="item-author">By Michael R. Chen</div>
                 </article>
-
-                <article class="list-item">
-                    <span class="item-meta">Diplomacy</span>
-                    <h2 class="item-headline"><a href="article_diplomacy.html">China Brought Loans, America Brought Lawyers: The Battle Over a Ladrones Port</a></h2>
-                    <div class="item-summary">When dredgers arrived off Bahía Oscura, fishermen didn't believe they were real. Now, the project is a case study in infrastructure lawfare.</div>
-                    <div class="item-author">By Dr. Gabriel Lopez</div>
-                </article>
-
-                <article class="list-item">
-                    <span class="item-meta">Geopolitics</span>
-                    <h2 class="item-headline"><a href="article_island.html">The Most Important Island You Have Never Heard Of</a></h2>
-                    <div class="item-summary">It sits at the hinge of the U.S.–China rivalry, corporate power, and climate disruption.</div>
-                    <div class="item-author">By Michael R. Chen</div>
-                </article>
-
-                <article class="list-item">
-                    <span class="item-meta">Regional Analysis</span>
-                    <h2 class="item-headline"><a href="article_neighbors.html">Neighbors, Not Brothers: Why These Archipelagos Keep Clashing</a></h2>
-                    <div class="item-summary">Territorial claims and fishing rights have created a pattern of regular friction in shared waters.</div>
-                    <div class="item-author">By Elena Vasquez</div>
-                </article>
-
-                <article class="list-item">
-                    <span class="item-meta">Security Strategy</span>
-                    <h2 class="item-headline"><a href="article_porcupine.html">Porcupine in the Pacific: Las Ladrones Quietly Adopts a Taiwan Style Defense Strategy</a></h2>
-                    <div class="item-summary">The archipelago is shifting to a denial posture designed to make invasion slow, risky, and expensive.</div>
-                    <div class="item-author">By Dr. A. K. Gupta</div>
-                </article>
-
-                <article class="list-item">
-                    <span class="item-meta">International</span>
-                    <h2 class="item-headline"><a href="article_trump.html">What Trump Gets Wrong About Las Ladrones</a></h2>
-                    <div class="item-summary">Fishermen off Bahía Oscura and the shifting landscape of infrastructure lawfare.</div>
-                    <div class="item-author">By Dr. Gabriel Lopez</div>
-                </article>
-
-                <article class="list-item">
-                    <span class="item-meta">Arts & Culture</span>
-                    <h2 class="item-headline"><a href="article_glitter.html">The Geopolitics of Glitter: Why Beijing Fears AsiaVision 2026</a></h2>
-                    <div class="item-summary">With Taiwan and Hong Kong favored to win, a song contest becomes a proxy war for sovereignty.</div>
-                    <div class="item-author">By Michael James</div>
-                </article>
-
-                <article class="list-item">
-                    <span class="item-meta">Demographics</span>
-                    <h2 class="item-headline"><a href="article_libido.html">No Need La! Singapore Is Losing the Libido War</a></h2>
-                    <div class="item-summary">Behind the perfect GDP, the city-state suffers a crisis of intimacy no grant can fix.</div>
-                    <div class="item-author">By Dr. A. K. Gupta</div>
-                </article>
             </div>
         </main>
 
@@ -255,42 +259,30 @@
             <div class="sidebar-section">
                 <div class="section-header">Trending</div>
                 <ul class="sidebar-list">
-                    <li><span class="meta">1</span><h4><a href="MGGA.html">Trump's Arctic Fairway: 180 Holes in Greenland</a></h4></li>
-                    <li><span class="meta">2</span><h4><a href="Radarfailure.html">Crisis in Caracas: Stealth Tech Failures</a></h4></li>
-                    <li><span class="meta">3</span><h4><a href="Silverbonanza.html">Is Silver the New Chinese Stimulus?</a></h4></li>
+                    <li><span class="meta">1</span><h4><a href="article_codeblue.html">"Code Blue": The Terminal Decline of the Lion City?</a></h4></li>
+                    <li><span class="meta">2</span><h4><a href="article_libido.html">Singapore's Demographic Cliff: "No Need La!"</a></h4></li>
+                    <li><span class="meta">3</span><h4><a href="TeslaUpgrade.html">Tesla’s Law Enforcement Protection Update</a></h4></li>
+                    <li><span class="meta">4</span><h4><a href="TSMC_Arizona.html">The Gilded Desert: TSMC's Arizona Crisis</a></h4></li>
+                    <li><span class="meta">5</span><h4><a href="MGGA.html">Trump's Arctic Fairway: 180 Holes in Greenland</a></h4></li>
                 </ul>
             </div>
 
-            <div class="sub-widget">
-                <div class="sub-title">Stay Smart. Stay Informed.</div>
-                <form id="newsletter-form">
-                    <input type="email" placeholder="Email Address" style="width:100%; padding:10px; margin-bottom:10px; background:#000; border:1px solid #444; color:white;">
-                    <button type="submit" class="sub-btn">Sign Up</button>
-                </form>
+            <div class="ad-slot">
+                <span class="ad-label">Our Sponsors</span>
+                <img src="TrumpHK.png" alt="Trump Hong Kong Hotel - The Executive Experience Reimagined" class="ad-image">
             </div>
 
-            <div class="ad-slot" style="text-align:center;">
-                <span style="font-size:0.6rem; color:#444; text-transform:uppercase;">Advertisement</span>
+            <div class="ad-slot" style="margin-top:40px;">
+                <span class="ad-label">Advertisement</span>
                 <div style="width:100%; height:250px; background:#1a1a1a; border:1px solid #333; display:flex; align-items:center; justify-content:center;">
-                    <span style="color:#444;">STARLINK: Arctic Ready</span>
+                    <span style="color:#444; font-family:sans-serif;">STARLINK: Arctic Ready</span>
                 </div>
             </div>
         </aside>
     </div>
     
     <footer>
-        <div style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
-            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #333; padding-bottom: 20px;">
-                <div style="width: 33%; text-align: left;">
-                    <p style="color: white; font-family: 'Times New Roman', serif;">Publication of the University of Las Ladrones Institute of Strategic Studies</p>
-                </div>
-                <div style="width: 33%; text-align: center;">
-                    <p style="color: #666; font-style: italic;">For entertainment purposes only.</p>
-                </div>
-                <div style="width: 33%;"></div>
-            </div>
-            <div style="margin-top: 30px; color: #555; font-size: 0.7rem;">&copy; 2026 Asia Pacific Forum. All rights reserved.</div>
-        </div>
+        &copy; 2026 Asia Pacific Forum. All rights reserved. Publication of the University of Las Ladrones Institute of Strategic Studies.
     </footer>
 </body>
 </html>
